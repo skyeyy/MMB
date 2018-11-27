@@ -1,0 +1,130 @@
+@import "base.less";
+/* 主体部分样式 */
+
+body {
+    padding: 0;
+}
+
+.mui-scroll {
+    min-height: 101%;
+    height: auto;
+    position: relative;
+    background-color: #fff;
+    #nav {
+        width: 100%;
+        height: auto;
+        background-color: #fff !important;
+        z-index: 999;
+        opacity: 1;
+        
+        p {
+            padding: 0.1rem;
+        }
+        h4 {
+            margin: 0;
+            padding: .1rem 0;
+            text-align: center;
+        }
+        button {
+            margin: .05rem;
+        }
+
+    }
+}
+
+#main {
+    background-color: #fff;
+    padding-top: .85rem; 
+    .mui-row {
+        background-color: #faf4f4;
+        >div {
+            text-align: center;
+            padding: .1rem 0;
+            &.left {
+                text-align: left;
+                padding-left: .05rem;
+                span {
+                    padding: .06rem 0;
+                }
+            }    
+            &.right {
+                padding: .05rem 0;
+                button {
+                    border-radius: .05rem;
+                    margin-right: -25px;
+                    padding: .05rem;
+                    background-color: #faf4f4;
+                }
+            }
+        }
+    }
+    .mui-table-view::before,
+    .mui-table-view::after {
+        border: 0;
+        height: 0;
+        
+    }
+    .mui-table-view {
+        li {
+            a {
+                display: flex;
+            }
+            .title {
+                color: black;
+                word-break: break-all;
+                font-size: 15px;
+                line-height: 28px;
+                height: 56px;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+            }
+            .price {
+                color: #ed0000;
+                font-size: .18rem;
+            }
+            .other {
+                margin-top: .04rem;
+                font-size: .12rem;
+            }
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-right: .1rem;
+            }
+        }
+    }
+    #page {
+        background-color: #f2f2f2;
+        padding: .1rem 0;
+    }
+}
+
+.bt {
+    border-top: 1px solid #c4c4c4;
+}
+.bb {
+    border-bottom: 1px solid #c4c4c4;
+}
+.bl {
+    border-left: 1px solid #c4c4c4;
+}
+.br {
+    border-right: 1px solid #c4c4c4;
+}
+#footer {
+    margin: 0;
+}
+#goTop {
+    position: fixed;
+    bottom: 0.1rem;
+    right: .1rem;
+    width: 0.44rem;
+    height: 0.44rem;
+    border-radius: 50%;
+    background-color: #fff;
+    background-image: url('../images/icon_bar.png');
+    background-size:220px 132px;
+    background-position: -132px 0px;
+}
