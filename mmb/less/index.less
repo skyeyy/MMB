@@ -1,0 +1,45 @@
+@import "base.less";
+#main {
+    #nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            li {
+                width: 25%;
+                padding: 5px 0;
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        width: 50px;
+                    }
+                    p {
+                        margin-top: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    #content {
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff9d1e;
+            color: #fff;
+            height: .35rem;
+            padding: 0 .05rem;
+            span {
+                font-weight: 600;
+            }
+            img {
+                width: .2rem;
+                height: .2rem;
+            }
+        }
+    }
+}

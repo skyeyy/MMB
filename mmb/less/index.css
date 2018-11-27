@@ -1,0 +1,136 @@
+html {
+  font-size: 100px;
+}
+img {
+  vertical-align: middle;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+}
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  font-style: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+#header .top {
+  display: flex;
+  padding: .1rem;
+  border-bottom: 1px solid #ddd;
+}
+#header .top .logo {
+  width: .8rem;
+}
+#header .top .logo img {
+  width: 100%;
+}
+#header .top form {
+  flex: 1;
+  padding: 0 .1rem;
+  position: relative;
+}
+#header .top form input {
+  width: 100%;
+  border-radius: .2rem;
+  height: .24rem;
+  background-color: #f9f9f9;
+  font-size: .14rem;
+  padding: 0 0 0 .35rem;
+  text-align: left;
+  margin-bottom: 0;
+}
+#header .top form .fa-search {
+  position: absolute;
+  top: .04rem;
+  left: .24rem;
+  color: #c8c8c8;
+}
+#header .top .download {
+  width: .38rem;
+  height: .24rem;
+  border: 1px solid #f85000;
+  border-radius: 12px;
+  color: #f85000;
+  font-size: .14rem;
+  text-align: center;
+  line-height: .24rem;
+}
+#header .nav {
+  border-bottom: 1px solid #ddd;
+}
+#header .nav ul {
+  overflow: auto;
+  white-space: nowrap;
+}
+#header .nav ul::-webkit-scrollbar {
+  display: none;
+}
+#header .nav ul li {
+  display: inline-block;
+  padding: .1rem;
+  font-size: .15rem;
+}
+#header .nav ul li a {
+  color: #000;
+  display: block;
+  height: 100%;
+  position: relative;
+}
+#header .nav ul li.active a {
+  color: #f9702e;
+}
+#header .nav ul li.active a::before {
+  content: "";
+  left: 0;
+  right: 0;
+  height: .04rem;
+  background-color: #f9702e;
+  position: absolute;
+  bottom: -0.09rem;
+}
+#main #nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+#main #nav ul li {
+  width: 25%;
+  padding: 5px 0;
+}
+#main #nav ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#main #nav ul li a img {
+  width: 50px;
+}
+#main #nav ul li a p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+#main #content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff9d1e;
+  color: #fff;
+  height: .35rem;
+  padding: 0 .05rem;
+}
+#main #content .title span {
+  font-weight: 600;
+}
+#main #content .title img {
+  width: .2rem;
+  height: .2rem;
+}
