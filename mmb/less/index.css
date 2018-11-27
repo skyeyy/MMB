@@ -1,6 +1,9 @@
 html {
   font-size: 100px;
 }
+body {
+  padding-top: .85rem;
+}
 img {
   vertical-align: middle;
 }
@@ -20,6 +23,15 @@ body {
   height: 100%;
   background-color: #fff;
   font-style: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: .85rem;
+  z-index: 999;
 }
 #header .top {
   display: flex;
@@ -94,7 +106,29 @@ body {
   height: .04rem;
   background-color: #f9702e;
   position: absolute;
-  bottom: -0.09rem;
+  bottom: -0.1rem;
+}
+#footer {
+  background-color: #efefef;
+}
+#footer .top {
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  text-align: center;
+  font-size: .14rem;
+  height: .34rem;
+  line-height: .34rem;
+}
+#footer .top div:nth-child(n+2) {
+  border-left: 0.01rem solid #dadada;
+}
+#footer .content {
+  padding: .15rem 0;
+  font-size: .12rem;
+  text-align: center;
+}
+#footer .content .download {
+  color: #ff6c00;
 }
 #main #nav ul {
   display: flex;
@@ -133,4 +167,65 @@ body {
 #main #content .title img {
   width: .2rem;
   height: .2rem;
+}
+#main #content ul li {
+  padding: .1rem .05rem;
+  border-bottom: 1px solid #dadada;
+}
+#main #content ul li a {
+  display: flex;
+}
+#main #content ul li a .left {
+  width: 120px;
+  text-align: center;
+}
+#main #content ul li a .left img {
+  width: 106px;
+}
+#main #content ul li a .right {
+  flex: 1;
+}
+#main #content ul li a .right .product-name {
+  font-size: .14rem;
+  color: #333;
+  line-height: 19px;
+  min-height: 57px;
+}
+#main #content ul li a .right .releated {
+  font-size: .12rem;
+}
+#main #content ul li a .right .releated .product-from {
+  float: left;
+}
+#main #content ul li a .right .releated .common {
+  float: right;
+}
+#main #content .more-bar {
+  text-align: center;
+  width: 100%;
+  padding: .1rem;
+}
+#main #content .more-bar a {
+  display: block;
+  width: 100%;
+  border: 1px solid #dadada;
+  line-height: .3rem;
+  font-size: 14px;
+  color: #000;
+  background-color: #f4f4f4;
+}
+.footer-top {
+  height: .35rem;
+  line-height: 0.35rem;
+  padding: 0 .05rem;
+  background-color: #ff6c00;
+}
+.footer-top a {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.footer-top a img {
+  margin-right: .1rem;
+  margin-top: .08rem;
 }
