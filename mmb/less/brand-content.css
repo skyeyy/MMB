@@ -132,6 +132,12 @@ body {
   color: #ff6c00;
 }
 /* 头部 */
+body {
+  padding-top: .45rem;
+}
+#header {
+  height: auto;
+}
 #main .directory {
   background-color: #f7f7f7;
   padding: 0 .1rem;
