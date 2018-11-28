@@ -1,11 +1,21 @@
 $(function(){
-    $.ajax ({
-        url: "http://localhost:9090/api/getindexmenu",
-        success: function(obj){
-            obj.result.unshift({name:"首页",titlehref:"index.html"});
-           var html = template("navTpl",obj);
-           $('.nav ul').html(html);
+    setNowFontSize();
+
+    function setNowFontSize() {
+      
+        var StandardWidth = 375;
+        var StandardFontSize = 100;
+        var maxFontSize = 200;
+        var nowWidth = document.documentElement.offsetWidth;
+        var nowFontSize = nowWidth / StandardWidth * StandardFontSize;
+        console.log(nowWidth);
+        console.log(nowFontSize);
+    
+        if(nowFontSize > maxFontSize){
+            nowFontSize = maxFontSize;
         }
-    });
+        document.documentElement.style.fontSize = nowFontSize + 'px';
+    }
+    window.addEventListener('resize', setNowFontSize);
     
 })
