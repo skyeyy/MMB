@@ -1,0 +1,53 @@
+body {
+  padding-top: .45rem;
+}
+a:active {
+  color: #fff;
+}
+#header {
+  height: .45rem;
+  display: flex;
+  background-color: #f4483e;
+}
+#header .back {
+  display: block;
+  width: .5rem;
+  height: .45rem;
+  text-align: center;
+}
+#header .back .fa-angle-left {
+  font-size: .35rem;
+  color: #fff;
+  line-height: .45rem;
+}
+#header h4 {
+  flex: 1;
+  text-align: center;
+  line-height: .45rem;
+  margin: 0;
+  color: #fff;
+}
+#header .download-app {
+  padding: 0 .08rem;
+  line-height: .45rem;
+}
+#header .download-app img {
+  width: .34rem;
+  height: .34rem;
+}
+#menu-nav {
+  width: 100%;
+  height: .35rem;
+  margin-top: .2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  line-height: .35rem;
+  background: linear-gradient(to top, #ddd, #fff);
+  padding-left: .1rem;
+}
+#menu-nav a {
+  font-size: .14rem;
+}
+#menu-nav a:active {
+  color: #666;
+}
