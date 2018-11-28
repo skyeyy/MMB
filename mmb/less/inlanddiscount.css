@@ -131,102 +131,55 @@ body {
 #footer .content .download {
   color: #ff6c00;
 }
-#main #nav ul {
+body {
+  padding: .85rem 0px  0px 0px;
+}
+#main {
+  background-color: white;
+  position: relative;
+  height: 100%;
+}
+#main ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 0;
 }
-#main #nav ul li {
-  width: 25%;
-  padding: 5px 0;
+#main ul li {
+  height: 2.99rem;
+  border-top: 1px solid #eee;
+  padding: .2rem;
+  width: 50%;
 }
-#main #nav ul li a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+#main ul li:nth-of-type(2n) {
+  border-left: 1px solid #eee;
 }
-#main #nav ul li a img {
-  width: 50px;
-}
-#main #nav ul li a p {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-#main #content .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ff9d1e;
-  color: #fff;
-  height: .35rem;
-  padding: 0 .05rem;
-}
-#main #content .title span {
-  font-weight: 600;
-}
-#main #content .title img {
-  width: .2rem;
-  height: .2rem;
-}
-#main #content ul li {
-  padding: .1rem .05rem;
-  border-bottom: 1px solid #dadada;
-}
-#main #content ul li a {
-  display: flex;
-}
-#main #content ul li a .left {
-  width: 120px;
-  text-align: center;
-}
-#main #content ul li a .left img {
-  width: 106px;
-}
-#main #content ul li a .right {
-  flex: 1;
-}
-#main #content ul li a .right .product-name {
-  font-size: .14rem;
-  color: #333;
-  line-height: 19px;
-  min-height: 57px;
-}
-#main #content ul li a .right .releated {
-  font-size: .12rem;
-}
-#main #content ul li a .right .releated .product-from {
-  float: left;
-}
-#main #content ul li a .right .releated .common {
-  float: right;
-}
-#main #content .more-bar {
-  text-align: center;
-  width: 100%;
-  padding: .1rem;
-}
-#main #content .more-bar a {
+#main ul li a {
   display: block;
+}
+#main ul li a img {
   width: 100%;
-  border: 1px solid #dadada;
-  line-height: .3rem;
-  font-size: 14px;
-  color: #000;
-  background-color: #f4f4f4;
+  height: 1.47rem;
 }
-.footer-top {
-  height: .35rem;
-  line-height: 0.35rem;
-  padding: 0 .05rem;
-  background-color: #ff6c00;
+#main ul li a .title {
+  color: black;
+  height: .39rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
-.footer-top a {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
+#main ul li a .price {
+  color: red;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
-.footer-top a img {
-  margin-right: .1rem;
-  margin-top: .08rem;
+#footer {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
 }
