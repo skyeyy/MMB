@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>couponproduct</title>
+    <!-- 1.导入字体图标库 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 2.导入mui.css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 4.导入index.less文件 -->
+    <link rel="stylesheet/less" href="less/couponproduct.less">
+    <!-- 3.导入less.js文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="back">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <h4>肯德基优惠券</h4>
+        <a href="#" class="download-app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="hint">--点餐前出示手机中的优惠券,即可享受优惠--</div>
+        <ul class="product-list">
+            <li>
+                <a href="javascript:;" class="product">
+                    <img class="product-img" src="images/ic_coudanpin.png">
+                    <div class="product-intro">
+                        <p class="product-title">1235645767i8o ubhtht</p>
+                        <p class="product-price">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                        <p class="product-limited">有效期至12月30日</p>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </main>
+
+
+    <section id="menu-nav">
+        <a href="index.html">首页 ></a>
+        <a href="coupon.html">优惠券 ></a>
+        <a href="#">优惠券列表</a>
+    </section>
+    <footer id="footer">
+
+        <div class="mui-row top">
+            <div class="mui-col-xs-4"><a href="login.html">登录</a></div>
+            <div class="mui-col-xs-4"><a href="register.html">注册</a></div>
+            <div class="mui-col-xs-4"><a href="#">返回顶部</a></div>
+        </div>
+        <div class="content">
+            <p><a href="https://at.umeng.com/onelink/Pvmmmy" class="download">手机APP下载</a> <a href="index.html">慢慢买手机版</a>
+                -- 掌上比价平台 </p>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </footer>
+
+    <!-- 遮罩层 -->
+    <div class="mask">
+        <i class="fa fa-times-circle close"></i>
+        <div id="slide">
+            <div class="mui-slider">
+                <!-- <div class="mui-slider-group mui-slider-loop"> -->
+                  <!-- 支持循环，需要重复图片节点
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="4.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="1.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="2.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="3.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="4.jpg" /></a></div> -->
+                    <!--支持循环，需要重复图片节点-->
+                    <!-- <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="1.jpg" /></a></div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script id="getcouponTpl" type="text/html">
+        {{each result value}}
+           <li>
+                <a href="javascript:;" class="product">
+                    <div class="img">{{@value.couponProductImg}}</div>
+                    <div class="product-intro">
+                        <p class="product-title">{{value.couponProductName}}</p>
+                        <p class="product-price">{{value.couponProductPrice}}</p>
+                        <p class="product-limited">{{value.couponProductTime}}</p>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <script id="sliderTpl" type="text/html">
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-group mui-slider-loop">
+        {{each result value index}}
+
+          {{if index==result.length-1}}
+            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#">{{@value.couponProductImg}}</div>
+            {{/if}}
+
+          <div class="mui-slider-item"><a href="#">{{@value.couponProductImg}}</a></div>
+
+          {{if index==0}}
+          <!--支持循环，需要重复图片节点-->
+          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#">{{@value.couponProductImg}}</a></div>
+          {{/if}}
+
+        {{/each}}
+            </div>
+    </script>
+    <!-- 5.导入mui.js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 6.导入zepto.js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 7.导入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 8.导入getcoupon.js -->
+    <script src="js/couponproduct.js"></script>
+</body>
+
+</html>
