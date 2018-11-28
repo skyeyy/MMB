@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
+		<title>品牌大全</title>
 		<!-- 引入 mui css文件 -->
 		<link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css"/>
 		<!-- 引入字体图标库文件 -->
@@ -13,11 +13,8 @@
 		<link rel="stylesheet/less" href="less/brandtitle.less"/>
 		<!-- 引入 less.js -->
 		<script src="lib/less/less.js" type="text/javascript" charset="utf-8"></script>
-		
 	</head>
-	
 	<body>
-		<!--头部区域-->
 		<header id="header">
 	        <div class="top">
 	            <a href="index.html" class="logo">
@@ -30,63 +27,57 @@
 	            <a href="#" class="download">下载</a>
 	        </div>
 	    </header>
-	    
 	    <!--中间主体内容-->
-	    <!--crumb-->
 	    <main id="main">
-	    	 <!-- 区域滚动的父容器 高度是固定的-->
-        <div class="mui-scroll-wrapper">
-            <!-- 区域滚动的子容器 高度是由内容撑开的 -->
-            <div class="mui-scroll">
-	    	<h4 class="crumb-classify">
-	    		<a href="#">首页</a>><a href="#">全部分类</a>>
-	    	</h4>
-	    	<h3 class="title">
-	    		热门品牌排行
-	    	</h3>
-	    	
-	    	<!--热门品牌排行-->
-	    	<div class="hotbrand">
-	    		<ul class="mui-table-view"> 
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">电视</a>
-			            <div class="mui-collapse-content nav-content tv">
-			            </div>
-			        </li>
-			        
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">空调</a>
-			            <div class="mui-collapse-content nav-content vrv">
-			            </div>
-			        </li>
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">影音</a>
-			            <div class="mui-collapse-content nav-content video">
-			            </div>
-			        </li>
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">冰箱</a>
-			            <div class="mui-collapse-content nav-content refrigerator">
-			            </div>
-			        </li>
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">厨卫</a>
-			            <div class="mui-collapse-content nav-content kitchen">
-			            </div>
-			        </li>
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">手机</a>
-			            <div class="mui-collapse-content nav-content mobile">
-			            </div>
-			        </li>
-			        <li class="mui-table-view-cell mui-collapse nav-box">
-			            <a class="mui-navigate-right nav-title" href="#">相机</a>
-			            <div class="mui-collapse-content nav-content camera">
-			            </div>
-			        </li>
-			    </ul>
-	    	</div>
-	    	</div>
+	        <div class="mui-scroll-wrapper">
+	            <div class="mui-scroll">
+			    	<h4 class="crumb-classify">
+			    		<a href="index.html">首页</a>><a href="brandtitle.html">全部分类</a>>
+			    	</h4>
+			    	<h3 class="title">
+			    		热门品牌排行
+			    	</h3>
+			    	<div class="hotbrand">
+			    		<ul class="mui-table-view"> 
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">电视</a>
+					            <div class="mui-collapse-content nav-content tv">
+					            </div>
+					        </li>
+					        
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">空调</a>
+					            <div class="mui-collapse-content nav-content vrv">
+					            </div>
+					        </li>
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">影音</a>
+					            <div class="mui-collapse-content nav-content video">
+					            </div>
+					        </li>
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">冰箱</a>
+					            <div class="mui-collapse-content nav-content refrigerator">
+					            </div>
+					        </li>
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">厨卫</a>
+					            <div class="mui-collapse-content nav-content kitchen">
+					            </div>
+					        </li>
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">手机</a>
+					            <div class="mui-collapse-content nav-content mobile">
+					            </div>
+					        </li>
+					        <li class="mui-table-view-cell mui-collapse nav-box">
+					            <a class="mui-navigate-right nav-title" href="#">相机</a>
+					            <div class="mui-collapse-content nav-content camera">
+					            </div>
+					        </li>
+					    </ul>
+			    	</div>
+	    		</div>
 	    	</div>
 	    </main>
 	    <footer id="footer">
@@ -101,16 +92,13 @@
 	            <p>m.manmanbuy.com </p>
 	        </div>
 	    </footer>
-		
 		<!-- 引入zepto.js 文件 -->
 		<script src="lib/zepto/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="lib/zepto/fx.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 引入模板引擎 -->
 		<script src="lib/artTemplate/template-web.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 引入mui.js 文件 -->
 		<script src="lib/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 引入当前页面js文件 -->
 		<script src="js/brandtitle.js" type="text/javascript" charset="utf-8"></script>
-
 	</body>
 </html>
