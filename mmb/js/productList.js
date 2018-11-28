@@ -15,35 +15,52 @@ var MMB = function () {
 MMB.prototype = {
     categoryid: 1,
     pageid: 1,
+    categorynavid: 1,
     queryNav: function () { // 获取分类标题
         var that = this;
+        that.categorynavid = that.getQueryString('categoryid');
+        that.categorynavid = that.categorynavid ? that.categorynavid : 1;
         $.ajax({
             url: "http://localhost:9090/api/getcategorybyid",
             data: {
-                categoryid: that.getQueryString('categoryid')
+                categoryid: that.categorynavid
             },
             success: function (data) {
-                // console.log(data);
-                $('#category').attr('href', 'productList.html?categoryid=' + data.result[0].categoryId).html(data.result[0].category);
+                that.title = that.getQueryString('title');
+                that.title = that.title ? that.title : '全部分类';
+                that.categoryname = data.result[0].category;
+                $('#categorytitle').html(that.title);
+                $('#category').attr('href', 'productList.html?title='+that.title+'&categoryid=' + data.result[0].categoryId).html(that.categoryname);
             }
         });
     },
     queryProduct: function () { // 商品渲染
-        this.categoryid = this.getQueryString('categoryid');
         var that = this;
+        that.categoryid = that.getQueryString('categoryid');
+        that.categoryid = that.categoryid ? that.categoryid : 1;
         $.ajax({
             url: "http://localhost:9090/api/getproductlist",
             data: {
-                categoryid: this.categoryid,
-                pageid: this.pageid,
+                categoryid: that.categoryid,
+                pageid: that.pageid,
             },
             success: function (data) {
-                console.log(data);
+                data.title = that.title;
+                data.categoryname = that.categoryname;
                 var html = template('productListTpl', data);
                 $('.product-List').html(html);
                 that.pageCount = Math.ceil(data.totalCount / data.pagesize);
                 that.initPage();
-                $('.mui-scroll').attr('style', '');
+                // $('.mui-scroll').attr('style', '');
+                mui('.mui-scroll-wrapper').scroll({
+                    scrollY: true, //是否竖向滚动
+                    scrollX: false, //是否横向滚动
+                    startX: 0, //初始化时滚动至x
+                    startY: 0, //初始化时滚动至y
+                    indicators: true, //是否显示滚动条
+                    deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+                    bounce: true //是否启用回弹
+                });
             }
         });
     },
@@ -81,12 +98,10 @@ MMB.prototype = {
             $('#pageNext').attr('disabled', 'disabled')
         }
         $('#pagePre').on('tap', function () {
-
             that.pageid--;
             that.queryProduct();
         });
         $('#pageNext').on('tap', function () {
-
             that.pageid++;
             that.queryProduct();
         });
@@ -107,7 +122,13 @@ MMB.prototype = {
     },
     filtrate: function () { // 滚动插件,滑动插件初始化
         mui('.mui-scroll-wrapper').scroll({
-            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+            scrollY: true, //是否竖向滚动
+            scrollX: false, //是否横向滚动
+            startX: 0, //初始化时滚动至x
+            startY: 0, //初始化时滚动至y
+            indicators: true, //是否显示滚动条
+            deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+            bounce: true //是否启用回弹
         });
         $('.filtrate').on('tap', function () {
             mui('.mui-off-canvas-wrap').offCanvas().show();
@@ -117,6 +138,8 @@ MMB.prototype = {
         $.ajax({
             url: "http://localhost:9090/api/getcategorytitle",
             success: function (data) {
+
+
                 var html = '';
                 for (var i = 0; i < data.result.length; i++) {
                     html += "<button type='button' class='getCategorytitle' data-titleid='" + data.result[i].titleId + "'>" + data.result[i].title + "</button>";
@@ -130,6 +153,7 @@ MMB.prototype = {
                             titleid: titleId
                         },
                         success: function (data) {
+                            console.log(data);
                             html = '';
                             for (var i = 0; i < data.result.length; i++) {
                                 html += "<button type='button' class='getCategory' data-categoryid='" + data.result[i].categoryId + "'>" + data.result[i].category + "</button>";
@@ -157,7 +181,8 @@ MMB.prototype = {
         $('.categoryTitleul').on('tap', '.getCategorytitle', function () {
             isCategorytitle = true;
             $(this).css("backgroundColor", '#ff6c00').siblings().css("background", 'white');
-            that.Categorytitle = +$(this).data('titleid');
+            that.Categorytitle = $(this).data('titleid');
+            that.title = $(this).html().replace(/\s/g, '');
         });
         $('.categoryul').on('tap', '.getCategory', function () {
             isCategoryid = true;
@@ -170,15 +195,14 @@ MMB.prototype = {
                 return;
             }
             mui('.mui-off-canvas-wrap').offCanvas().close();
-            location = "ProductList.html?categoryid=" + that.categoryid;
+            location = "ProductList.html?title=" + that.title + "&categoryid=" + that.categoryid;
         });
     },
-    getAClick: function() { // 获取被mui阻止的a跳转
-        mui(document).on('tap', 'a', function() {
+    getAClick: function () { // 获取被mui阻止的a跳转
+        mui(document).on('tap', 'a', function () {
             var a = document.createElement('a');
             a = this.cloneNode(true);
             a.click();
         })
     }
 }
-

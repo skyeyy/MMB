@@ -52,10 +52,10 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li class="active"><a href="index.html">首页</a></li>
+                        <li><a href="index.html">首页</a></li>
                         <li><a href="#">省钱控</a></li>
                         <li><a href="#">查历史价</a></li>
-                        <li><a href="#">比价搜索</a></li>
+                        <li class="active"><a href="#">比价搜索</a></li>
                         <li><a href="#">国内折扣</a></li>
                         <li><a href="#">白菜价</a></li>
                         <li><a href="#">小时风云榜</a></li>
@@ -69,7 +69,7 @@
                     <main id="main">
                         <div class="mui-row">
                             <div class="mui-col-xs-9 left">
-                                <a href="index.html">首页</a> > <a href="category.html">全部分类</a> > <a href="productList.html" id="category"></a>
+                                <a href="index.html">首页</a> > <a href="category.html" id="categorytitle">全部分类</a> > <a href="productList.html" id="category"></a>
                                 >
                             </div>
 
@@ -80,6 +80,11 @@
                         <ul class="mui-table-view product-List">
                         </ul>
                         <div id="page">
+                        </div>
+                        <div id="about">
+                            <h4>相关链接</h4>
+                            <p><a href="productList.html?title=电视机&categoryid=0">电视机十大品牌</a></p>
+                            <p><a href="productList.html?title=电视机&categoryid=0">电视机口碑大全</a></p>
                         </div>
                     </main>
                     <footer id="footer">
@@ -106,7 +111,7 @@
         {{ if result.length > 0 }}
             {{ each result value }}
             <li class="mui-table-view-cell mui-media">
-                <a href="javascript:;">
+                <a href="productDetails.html?title={{ categorytitle }}&category={{ categoryname }}&productid={{ value.productId }}">
                         {{@value.productImg }}
                     <div class="mui-media-body">
                         <div class="title">{{ value.productName }}</div>

@@ -222,6 +222,18 @@ body {
   background-color: #f2f2f2;
   padding: .1rem 0;
 }
+#main #about {
+  padding-left: .05rem;
+  background-color: #f2f2f2;
+}
+#main #about h4 {
+  margin: 0;
+  font-weight: normal;
+}
+#main #about p {
+  margin: 0;
+  padding: .1rem 0;
+}
 .bt {
   border-top: 1px solid #c4c4c4;
 }
