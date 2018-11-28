@@ -47,20 +47,13 @@ MMB.prototype = {
             success: function (data) {
                 data.title = that.title;
                 data.categoryname = that.categoryname;
+                mui('.mui-content.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
                 var html = template('productListTpl', data);
                 $('.product-List').html(html);
                 that.pageCount = Math.ceil(data.totalCount / data.pagesize);
                 that.initPage();
                 // $('.mui-scroll').attr('style', '');
-                mui('.mui-scroll-wrapper').scroll({
-                    scrollY: true, //是否竖向滚动
-                    scrollX: false, //是否横向滚动
-                    startX: 0, //初始化时滚动至x
-                    startY: 0, //初始化时滚动至y
-                    indicators: true, //是否显示滚动条
-                    deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
-                    bounce: true //是否启用回弹
-                });
+                
             }
         });
     },
