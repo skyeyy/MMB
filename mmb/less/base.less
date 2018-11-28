@@ -1,7 +1,9 @@
 @main-color: #ff6c00;
+@border-color: #dadada;
 html {
     font-size: 100px;
 }
+
 body {
     padding-top: .85rem;
 }
@@ -84,7 +86,7 @@ body {
     .nav {
         border-bottom: 1px solid #ddd;
         ul {
-            overflow: auto; 
+            overflow: auto;
             white-space: nowrap;
             &::-webkit-scrollbar {
                 display: none;
@@ -109,13 +111,36 @@ body {
                             height: .04rem;
                             background-color: #f9702e;
                             position: absolute;
-                            bottom: -0.09rem;
-                            
+                            bottom: -0.1rem;
                         }
                     }
-                    
                 }
             }
+        }
+    }
+}
+
+#footer {
+    margin-top: .2rem;
+    background-color: #efefef;
+    .top {
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        text-align: center;
+        font-size: .14rem;
+        height: .34rem;
+        line-height: .34rem;
+        div:nth-child(n+2) {
+            border-left: .01rem solid @border-color;
+        }
+        
+    }
+    .content {
+        padding: .15rem 0;
+        font-size: .12rem;
+        text-align: center;
+        .download {
+            color: @main-color;
         }
     }
 }
