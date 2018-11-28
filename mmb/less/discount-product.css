@@ -131,102 +131,36 @@ body {
 #footer .content .download {
   color: #ff6c00;
 }
-#main #nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 0;
-}
-#main #nav ul li {
-  width: 25%;
-  padding: 5px 0;
-}
-#main #nav ul li a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-#main #nav ul li a img {
-  width: 50px;
-}
-#main #nav ul li a p {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-#main #content .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ff9d1e;
-  color: #fff;
-  height: .35rem;
-  padding: 0 .05rem;
-}
-#main #content .title span {
-  font-weight: 600;
-}
-#main #content .title img {
-  width: .2rem;
-  height: .2rem;
-}
-#main #content ul li {
-  padding: .1rem .05rem;
-  border-bottom: 1px solid #dadada;
-}
-#main #content ul li a {
-  display: flex;
-}
-#main #content ul li a .left {
-  width: 120px;
-  text-align: center;
-}
-#main #content ul li a .left img {
-  width: 106px;
-}
-#main #content ul li a .right {
-  flex: 1;
-}
-#main #content ul li a .right .product-name {
-  font-size: .14rem;
-  color: #333;
-  line-height: 19px;
-  min-height: 57px;
-}
-#main #content ul li a .right .releated {
-  font-size: .12rem;
-}
-#main #content ul li a .right .releated .product-from {
-  float: left;
-}
-#main #content ul li a .right .releated .common {
-  float: right;
-}
-#main #content .more-bar {
-  text-align: center;
-  width: 100%;
+#main {
   padding: .1rem;
 }
-#main #content .more-bar a {
-  display: block;
+#main h3 {
+  text-align: center;
+}
+#main h4 {
+  color: #ff6c00;
+  margin-bottom: .2rem;
+}
+#main .info {
+  color: #ccc;
+  margin-bottom: .2rem;
+}
+#main .play {
+  color: #555;
+  margin-bottom: .2rem;
+}
+#main .play .right {
+  float: right;
+}
+#main .play .right img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+#main .btn-shpping {
+  background-color: #ff9000;
   width: 100%;
-  border: 1px solid #dadada;
-  line-height: .3rem;
-  font-size: 14px;
-  color: #000;
-  background-color: #f4f4f4;
+  margin-bottom: .5rem;
 }
-.footer-top {
-  height: .35rem;
-  line-height: 0.35rem;
-  padding: 0 .05rem;
-  background-color: #ff6c00;
-}
-.footer-top a {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-}
-.footer-top a img {
-  margin-right: .1rem;
-  margin-top: .08rem;
+#main .advertising {
+  width: 100%;
 }

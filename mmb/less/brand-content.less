@@ -1,0 +1,162 @@
+// 导入base文件
+@import "./base.less";
+/* 头部 */
+body {
+    padding-top: .45rem;
+}
+#header {
+    height: auto;
+}
+
+#main {
+    .directory {
+        background-color: #f7f7f7;
+        padding: 0 .1rem;
+        >p {
+            margin: 0;
+            height: .3rem;
+            line-height: .3rem;
+        }
+    }
+    .title {
+        border: none;
+        border-top: .01rem solid #666;
+        border-bottom: .01rem solid #666;
+        border-radius: 0;
+        .mui-control-item {
+            border: none;
+            color: #666;
+            &.mui-active {
+                background-color: #666;
+                color: #fff;
+            }
+        }
+    }
+    .ranking {
+        >div {
+            >a {
+                display: flex;
+                padding: .1rem;
+                border: .01rem solid #ccc;
+                border-top: none;
+                background-color: #f7f7f7;
+            }
+        }
+        #item1 {
+            a {
+                
+                &:nth-child(1) .left {
+                    background-color: #f00;
+                }
+                &:nth-child(2) .left {
+                    background-color: orange;
+                }
+                &:nth-child(3) .left {
+                    background-color: forestgreen;
+                }
+                .left {
+                    width: .2rem;
+                    height: .2rem;
+                    background-color: #ccc;
+                    color: #fff;
+                    text-align: center;
+                    line-height: .2rem;
+                }
+                .center {
+                    flex: 1;
+                    padding: 0 .15rem;
+                    >p:nth-child(1) {
+                        color: #000;
+                        font-size: .16rem;
+                    }
+                }
+                .right {
+                    font-size: .36rem;
+                    font-weight: normal;
+                    color: #ccc;
+                    display: flex;
+                    align-items: center;
+                }
+                
+            }
+        }
+        #item2 {
+            > a{
+                
+                .itme2-left {
+                    padding-right: .15rem;
+                    >img {
+                        width: 1rem;
+                    }
+                }
+                .item2-right{
+                    p:nth-child(1){
+                        color: #000;
+                    }
+                    p:nth-child(2){
+                        color: orangered;
+                        display: flex;
+                        justify-content: space-between;
+                        span:nth-child(1) {
+                            font-size: .18rem;
+                        }
+                        span:nth-child(2) {
+                            font-size: .12rem;
+                        }
+                    }
+                }
+            }
+        }
+        #item3 {
+            >a {
+                flex-wrap: wrap;
+                .item3-top {
+                    img{
+                        height: 1rem;
+                    }
+                }
+                .item3-bottom {
+                    width: 100%;
+                    margin-top: .1rem;
+                    padding: .1rem;
+                    border: .01rem solid #ccc;
+                    background-color: #eee;
+                    border-radius: .05rem;
+                    p {
+                        color: #000;
+                        font-size: .16rem;
+                        &:nth-child(1) {
+                            text-align: right;
+                            padding-right: .1rem;
+                        }
+                        &:nth-child(2) {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-right: .1rem;
+                            padding-left: 0;
+                        }
+                        &:nth-child(3) {
+                            color: orangered;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .footer-top {
+//     height: .35rem;
+//     line-height: 0.35rem;
+//     padding: 0 .05rem;
+//     background-color: #232a34;
+//     a {
+//     display: flex;
+//     justify-content: space-between;
+//     color: #fff;
+//         img {
+//             margin-right: .1rem;
+//             margin-top: .08rem;
+//         }
+//     }
+// }
