@@ -43,7 +43,7 @@
     </header>
     <!-- 按钮 -->
     <div class="back">
-        <a href="#" class="fa fa-arrow-circle-up"></a>
+        <a href="#" class="fa fa-arrow-circle-up backBtn"></a>
     </div>
     <!-- 主体部分 -->
     <main id="main">
@@ -88,8 +88,8 @@
 </html>
 <!-- 创建菜单模板 -->
 <script type="text/html" id="productMenu">
-    {{each result value}}
-        <li data-id="{{value.titleId}}"><a href="#">{{value.title}}</a></li>
+    {{each result value index}}
+        <li data-id="{{value.titleId}}" class="{{index == 0?'active':''}}"><a href="#">{{value.title}}</a></li>
     {{/each}}
 </script>
 

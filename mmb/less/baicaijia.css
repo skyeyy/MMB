@@ -272,8 +272,9 @@ body {
 }
 .back .fa-arrow-circle-up {
   font-size: .55rem;
-  bottom: .5rem;
+  bottom: 0;
   right: .2rem;
   color: #fe4a65;
   position: fixed;
+  z-index: 1;
 }
