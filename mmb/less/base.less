@@ -27,9 +27,6 @@ a {
     color: #666;
 }
 
-i {
-    font-style: normal;
-}
 html,
 body {
     height: 100%;
@@ -49,6 +46,7 @@ body {
         display: flex;
         padding: .1rem;
         border-bottom: 1px solid #ddd;
+        height: .45rem;
         .logo {
             width: .8rem;
             img {
@@ -89,6 +87,7 @@ body {
     }
     .nav {
         border-bottom: 1px solid #ddd;
+        height: .4rem;
         ul {
             overflow: auto;
             white-space: nowrap;
@@ -147,4 +146,159 @@ body {
             color: @main-color;
         }
     }
+}
+// 悬浮球的
+.navbar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    // margin: 100px auto;  
+    position: fixed;
+    top: .7rem;
+    left: .1rem;
+    z-index: 9999;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .3);
+    
+a {
+    display: block;
+
+}
+
+img {
+    width: 100%;
+}
+
+.navbar.click {
+    background-color: rgba(0, 0, 0, .6);
+
+}
+
+.navbar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    border: 35px solid transparent;
+    cursor: default;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 1.4s 0.07s;
+    z-index: -1;
+
+}
+
+.navbar.click .menu {
+    transition: transform 0.4s 0.08s;
+    transform: scale(1);
+
+}
+
+.navbar .menu li {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    transform-origin: 50px 50px;
+    transition: all 0.5s 0.1s;
+
+}
+
+.navbar .menu li a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.navbar.click .menu li:nth-child(1) {
+    transition-delay: 0.02s;
+    transform: rotate(85deg);
+}
+
+.navbar.click .menu li:nth-child(1) a {
+    transition-delay: 0.04s;
+    transform: rotate(635deg);
+}
+
+.navbar.click .menu li:nth-child(2) {
+    transition-delay: 0.04s;
+    transform: rotate(125deg);
+}
+
+.navbar.click .menu li:nth-child(2) a {
+    transition-delay: 0.08s;
+    transform: rotate(595deg);
+}
+
+.navbar.click .menu li:nth-child(3) {
+    transition-delay: 0.06s;
+    transform: rotate(165deg);
+}
+
+.navbar.click .menu li:nth-child(3) a {
+    transition-delay: 0.12s;
+    transform: rotate(555deg);
+}
+
+.navbar.click .menu li:nth-child(4) {
+    transition-delay: 0.08s;
+    transform: rotate(205deg);
+}
+
+.navbar.click .menu li:nth-child(4) a {
+    transition-delay: 0.16s;
+    transform: rotate(515deg);
+}
+
+.navbar.click .menu li:nth-child(5) {
+    transition-delay: 0.1s;
+    transform: rotate(245deg);
+}
+
+.navbar.click .menu li:nth-child(5) a {
+    transition-delay: 0.2s;
+    transform: rotate(475deg);
+}
+
+.navbar.click .menu li:nth-child(6) {
+    transition-delay: 0.12s;
+    transform: rotate(285deg);
+}
+
+.navbar.click .menu li:nth-child(6) a {
+    transition-delay: 0.24s;
+    transform: rotate(435deg);
+}
+
+.navbar.click .menu li:nth-child(7) {
+    transition-delay: 0.14s;
+    transform: rotate(325deg);
+}
+
+.navbar.click .menu li:nth-child(7) a {
+    transition-delay: 0.28s;
+    transform: rotate(395deg);
+}
+
+.navbar.click .menu li:nth-child(8) {
+    transition-delay: 0.16s;
+    transform: rotate(365deg);
+}
+
+.navbar.click .menu li:nth-child(8) a {
+    transition-delay: 0.32s;
+    transform: rotate(355deg);
+}
+
+.navbar.click .menu li:nth-child(9) {
+    transition-delay: 0.18s;
+    transform: rotate(405deg);
+}
+
+.navbar.click .menu li:nth-child(9) a {
+    transition-delay: 0.36s;
+    transform: rotate(315deg);
 }
