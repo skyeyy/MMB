@@ -119,9 +119,9 @@ body {
         }
         .secondary {
             ul {
-                display: block;
+                display: none;
                 &.active {
-                    display: none;
+                    display: block;
                 }
                 li {
                     position: relative;
@@ -132,18 +132,19 @@ body {
                         }
                     }
                     i {
+                        width: .2rem;
+                        height: .2rem;
+                        position: absolute;
+                        right: .2rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: .2rem;
+                        color: red;
                         display: none;
                     }
                     &.active {
                         i {
-                            width: .2rem;
-                            height: .2rem;
-                            position: absolute;
-                            right: .2rem;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            font-size: .2rem;
-                            color: red;
+                            display: block;
                         }
                     }
                 }
