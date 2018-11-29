@@ -1,3 +1,4 @@
+@import "base.less";
 #header {
     height: .45rem;
 }
@@ -6,7 +7,7 @@ html,body {
 }
 body {
     padding-top: .4rem;
-    padding-bottom: 1.3rem;
+    padding-bottom: 1.8rem;
     color: #565656;
     background-color: #f1f1f1;
 }
@@ -16,6 +17,8 @@ body {
 #main {
     position: relative;
     height: 100%;
+    top: .45rem;
+    padding-bottom: .53rem;
     overflow: hidden;
     .crumb-classify {
         padding: 0 .1rem;
@@ -24,6 +27,7 @@ body {
         font-size: .16rem;
         font-weight: normal;
         a {
+            display: inline-block;
             margin-left: .02rem;
         }
     }
@@ -81,7 +85,7 @@ body {
 }
 //
 //#footer {
-//  position: fixed;
+//  position: absolute;
 //  bottom: 0;
 //  left: 0;
 //  width: 100%;
