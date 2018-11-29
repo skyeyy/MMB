@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,34 +10,31 @@
     <script src="lib/less/less.js"></script>
     <title>商品列表</title>
 </head>
-
 <body>
     <!-- 侧滑导航根容器 -->
     <div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
         <!-- 菜单容器 -->
         <aside class="mui-off-canvas-left">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <!-- 菜单具体展示内容 -->
-                        <nav id="nav">
-                            <h4 class="bb">筛选</h4>
-                            <p>全部品牌</p>
-                            <div class="categoryTitleul">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 菜单具体展示内容 -->
+                    <nav id="nav">
+                        <h4 class="bb">筛选</h4>
+                        <p>全部品牌</p>
+                        <div class="categoryTitleul">
 
-                            </div>
-                            <p>全部分类</p>
-                            <div class="categoryul bb">
-                                <button type="button">默认</button>
-                            </div>
-                            <button type="button" id="getProductList">确认</button>
-                        </nav>
-                    </div>
+                        </div>
+                        <p>全部分类</p>
+                        <div class="categoryul bb">
+                            <button type="button">默认</button>
+                        </div>
+                        <button type="button" id="getProductList">确认</button>
+                    </nav>
                 </div>
+            </div>
         </aside>
         <!-- 主页面容器 -->
-
         <div class="mui-inner-wrap">
-
             <header id="header">
                 <div class="top">
                     <a href="index.html" class="logo">
@@ -52,17 +48,16 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="#">省钱控</a></li>
-                        <li><a href="#">查历史价</a></li>
-                        <li class="active"><a href="#">比价搜索</a></li>
-                        <li><a href="#">国内折扣</a></li>
-                        <li><a href="#">白菜价</a></li>
-                        <li><a href="#">小时风云榜</a></li>
+                        <li class="active"><a href="index.html">首页</a></li>
+                        <li><a href="moneyctrl.html">省钱控</a></li>
+                        <li><a href="history.html">查历史价</a></li>
+                        <li><a href="category.html">比价搜索</a></li>
+                        <li><a href="inlanddiscount.html">国内折扣</a></li>
+                        <li><a href="baicaijia.html">白菜价</a></li>
+                        <li><a href="brandtitle.html">品牌大全</a></li>
                     </ul>
                 </div>
             </header>
-
             <div class="mui-content mui-scroll-wrapper">
 
                 <div class="mui-scroll">
@@ -89,7 +84,6 @@
                         </div>
                     </main>
                     <footer id="footer">
-
                         <div class="mui-row top">
                             <div class="mui-col-xs-4"><a href="login.html">登录</a></div>
                             <div class="mui-col-xs-4"><a href="register.html">注册</a></div>
@@ -106,8 +100,22 @@
 
         </div>
     </div>
-
+    <!-- 返回顶部 -->
     <a href="#" id="goTop"></a>
+    <!-- 导航菜单 -->
+    <div class="navbar">
+        <ul class="menu">
+            <li><a href="index.html" class=""><img src="./images//home (1).png" alt=""></a></li>
+            <li><a href="productDetails.html" class="fa"><img src="./images/ic_search.png" alt=""></a></li>
+            <li><a href="moneyctrl.html" class=""><img src="./images/haitao.png" alt=""></a></li>
+            <li><a href="baicaijia.html" class=""><img src="./images/ic_bcj.png" alt=""></a></li>
+            <li><a href="gsproduct.html" class=""><img src="./images//ic_coudanpin.png" alt=""></a></li>
+            <li><a href="moneyctrl.html" class=""><img src="./images//ic_cu.png" alt=""></a></li>
+            <li><a href="category.html" class=""><img src="./images//ic_kb.png" alt=""></a></li>
+            <li><a href="brandtitle.html" class=""><img src="./images//ic_pp.png" alt=""></a></li>
+            <li><a href="sitenav.html" class=""><img src="./images/ic_mall.png" alt=""></a></li>
+        </ul>
+    </div>
     <script id="productListTpl" type="text/html">
         {{ if result.length > 0 }}
             {{ each result value }}
@@ -133,7 +141,7 @@
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/mui/js/mui.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
-    <!-- <script src="js/base.js"></script> -->
+    <script src="js/base.js"></script>
     <script src="js/productList.js"></script>
 </body>
 

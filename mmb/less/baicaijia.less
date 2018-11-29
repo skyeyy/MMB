@@ -34,14 +34,13 @@ body {
         }
       }
     }
-    .menu {
+    .download {
+      border: none;
       color: #fff;
+      background-color: @bcj-color;
       padding: 0 0.1rem;
-      display: block;
       line-height: 0.44rem;
-      i {
-        font-size: 0.2rem;
-      }
+      display: block;
     }
   }
   .nav {
@@ -100,13 +99,13 @@ body {
             height: 0.14rem;
             border: 1px solid #ee0000;
             position: relative;
-            border-radius: .05rem;
+            border-radius: .12rem;
             margin-right: .05rem;
             em {
               display: block;
               background-color: #ee0000;
               height: 100%;
-              border-radius: .05rem;
+              border-radius: .1rem;
             }
             span {
               font-size: .12rem;
@@ -122,10 +121,9 @@ body {
       .num {
         display: flex;
         justify-content: space-between;
-        font-size: 0.14rem;
+        font-size: 0.12rem;
         bottom: .05rem;
         a:nth-child(1) {
-          padding: 0.02rem;
           display: block;
           border: 0.01rem solid #ee0000;
           background-color: #fff;
@@ -134,7 +132,6 @@ body {
         a:nth-child(2) {
           position: absolute;
           right: 0.1rem;
-          padding: 0.02rem;
           display: block;
           background-color: #ee0000;
           color: #fff;
@@ -149,9 +146,10 @@ body {
 .back {
   .fa-arrow-circle-up {
     font-size: .55rem;
-    bottom: 2rem;
+    bottom: 0;
     right: .2rem;
     color: @bcj-color;
     position: fixed;
+    z-index: 1;
   }
 }
