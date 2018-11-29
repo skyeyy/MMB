@@ -1,109 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>品牌大全</title>
 		<!-- 引入 mui css文件 -->
-		<link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css" />
 		<!-- 引入字体图标库文件 -->
-		<link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.min.css" />
 		<!-- 引入 brandtitle.less文件 -->
-		<link rel="stylesheet/less" href="less/base.less"/>
-		<link rel="stylesheet/less" href="less/brandtitle.less"/>
+		<!--<link rel="stylesheet/less" href="less/base.less" />-->
+		<link rel="stylesheet/less" href="less/brandtitle.less" />
 		<!-- 引入 less.js -->
 		<script src="lib/less/less.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
 		<header id="header">
-	        <div class="top">
-	            <a href="index.html" class="logo">
-	                <img src="http://static.manmanbuy.com/m/img/mlogo.png">
-	            </a>
-	            <form>
-	                <input type="search" class="search" placeholder="商品比价、查历史价">
-	                <i class="fa fa-search"></i>
-	            </form>
-	            <a href="#" class="download">下载</a>
-	        </div>
-	    </header>
-	    <!--中间主体内容-->
-	    <main id="main">
-	        <div class="mui-scroll-wrapper">
-	            <div class="mui-scroll">
-			    	<h4 class="crumb-classify">
+			<div class="top">
+				<a href="index.html" class="logo">
+					<img src="http://static.manmanbuy.com/m/img/mlogo.png">
+				</a>
+				<form>
+					<input type="search" class="search" placeholder="商品比价、查历史价">
+					<i class="fa fa-search"></i>
+				</form>
+				<a href="#" class="download">下载</a>
+			</div>
+		</header>
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--中间主体内容-->
+				<main id="main">
+
+					<h4 class="crumb-classify">
 			    		<a href="index.html">首页</a>><a href="brandtitle.html">全部分类</a>>
 			    	</h4>
-			    	<h3 class="title">
+					<h3 class="title">
 			    		热门品牌排行
 			    	</h3>
-			    	<div class="hotbrand">
-			    		<ul class="mui-table-view"> 
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">电视</a>
-					            <div class="mui-collapse-content nav-content tv">
-					            </div>
-					        </li>
-					        
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">空调</a>
-					            <div class="mui-collapse-content nav-content vrv">
-					            </div>
-					        </li>
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">影音</a>
-					            <div class="mui-collapse-content nav-content video">
-					            </div>
-					        </li>
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">冰箱</a>
-					            <div class="mui-collapse-content nav-content refrigerator">
-					            </div>
-					        </li>
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">厨卫</a>
-					            <div class="mui-collapse-content nav-content kitchen">
-					            </div>
-					        </li>
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">手机</a>
-					            <div class="mui-collapse-content nav-content mobile">
-					            </div>
-					        </li>
-					        <li class="mui-table-view-cell mui-collapse nav-box">
-					            <a class="mui-navigate-right nav-title" href="#">相机</a>
-					            <div class="mui-collapse-content nav-content camera">
-					            </div>
-					        </li>
-					    </ul>
-			    	</div>
-	    		</div>
-	    	</div>
-	    </main>
-	    <footer id="footer">
-	        <div class="mui-row top">
-	            <div class="mui-col-xs-4"><a href="login.html">登录</a></div>
-	            <div class="mui-col-xs-4"><a href="register.html">注册</a></div>
-	            <div class="mui-col-xs-4"><a href="#">返回顶部</a></div>
-	        </div>
-	        <div class="content">
-	            <p><a href="https://at.umeng.com/onelink/Pvmmmy" class="download">手机APP下载</a> <a href="index.html">慢慢买手机版</a>
-	                -- 掌上比价平台 </p>
-	            <p>m.manmanbuy.com </p>
-	        </div>
-		</footer>
-		 <!-- 导航菜单 -->
-		 <div class="navbar">
+					<div class="hotbrand">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse mui-active nav-box">
+								<a class="mui-navigate-right nav-title" href="#">电视</a>
+								<div class="mui-collapse-content nav-content tv">
+								</div>
+							</li>
+
+							<li class="mui-table-view-cell mui-collapse nav-box">
+								<a class="mui-navigate-right nav-title" href="#">空调</a>
+								<div class="mui-collapse-content nav-content vrv">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse nav-box">
+								<a class="mui-navigate-right nav-title" href="#">影音</a>
+								<div class="mui-collapse-content nav-content video">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse nav-box">
+								<a class="mui-navigate-right nav-title" href="#">冰箱</a>
+								<div class="mui-collapse-content nav-content refrigerator">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse nav-box">
+								<a class="mui-navigate-right nav-title" href="#">厨卫</a>
+								<div class="mui-collapse-content nav-content kitchen">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse nav-box">
+								<a class="mui-navigate-right nav-title" href="#">手机</a>
+								<div class="mui-collapse-content nav-content mobile">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse nav-box">
+								<a class="mui-navigate-right nav-title" href="#">相机</a>
+								<div class="mui-collapse-content nav-content camera">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</main>
+				<footer id="footer">
+					<div class="mui-row top">
+						<div class="mui-col-xs-4">
+							<a href="login.html">登录</a>
+						</div>
+						<div class="mui-col-xs-4">
+							<a href="register.html">注册</a>
+						</div>
+						<div class="mui-col-xs-4">
+							<a href="#">返回顶部</a>
+						</div>
+					</div>
+					<div class="content">
+						<p>
+							<a href="https://at.umeng.com/onelink/Pvmmmy" class="download">手机APP下载</a>
+							<a href="index.html">慢慢买手机版</a>
+							-- 掌上比价平台 </p>
+						<p>m.manmanbuy.com </p>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- 导航菜单 -->
+		<div class="navbar">
 			<ul class="menu">
-				<li><a href="index.html" class=""><img src="./images//home (1).png" alt=""></a></li>
-				<li><a href="productDetails.html" class="fa"><img src="./images/ic_search.png" alt=""></a></li>
-				<li><a href="moneyctrl.html" class=""><img src="./images/haitao.png" alt=""></a></li>
-				<li><a href="baicaijia.html" class=""><img src="./images/ic_bcj.png" alt=""></a></li>
-				<li><a href="gsproduct.html" class=""><img src="./images//ic_coudanpin.png" alt=""></a></li>
-				<li><a href="moneyctrl.html" class=""><img src="./images//ic_cu.png" alt=""></a></li>
-				<li><a href="category.html" class=""><img src="./images//ic_kb.png" alt=""></a></li>
-				<li><a href="brandtitle.html" class=""><img src="./images//ic_pp.png" alt=""></a></li>
-				<li><a href="sitenav.html" class=""><img src="./images/ic_mall.png" alt=""></a></li>
+				<li>
+					<a href="index.html" class=""><img src="./images//home (1).png" alt=""></a>
+				</li>
+				<li>
+					<a href="productDetails.html" class="fa"><img src="./images/ic_search.png" alt=""></a>
+				</li>
+				<li>
+					<a href="moneyctrl.html" class=""><img src="./images/haitao.png" alt=""></a>
+				</li>
+				<li>
+					<a href="baicaijia.html" class=""><img src="./images/ic_bcj.png" alt=""></a>
+				</li>
+				<li>
+					<a href="gsproduct.html" class=""><img src="./images//ic_coudanpin.png" alt=""></a>
+				</li>
+				<li>
+					<a href="moneyctrl.html" class=""><img src="./images//ic_cu.png" alt=""></a>
+				</li>
+				<li>
+					<a href="category.html" class=""><img src="./images//ic_kb.png" alt=""></a>
+				</li>
+				<li>
+					<a href="brandtitle.html" class=""><img src="./images//ic_pp.png" alt=""></a>
+				</li>
+				<li>
+					<a href="sitenav.html" class=""><img src="./images/ic_mall.png" alt=""></a>
+				</li>
 			</ul>
 		</div>
 		<!-- 引入zepto.js 文件 -->
@@ -115,4 +145,5 @@
 		<!-- 引入当前页面js文件 -->
 		<script src="js/brandtitle.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>
