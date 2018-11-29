@@ -19,7 +19,7 @@
 
 <body>
     <!-- 头部 -->
-    <header id="header">
+    <headr id="header">
         <div class="one">
             <a href="baicaijia.html" class="logo">白菜价</a>
             <div class="search">
@@ -27,7 +27,9 @@
                     <input type="search" placeholder="好宝贝 等你搜">
                 </form>
             </div>
-            <a href="https://at.umeng.com/onelink/Pvmmmy" class="download">下载</a>
+            <a href="JavaScript:;" class="menu">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
         <div class="nav">
             <ul>
@@ -40,17 +42,19 @@
                 <li><a href="#">9.96包邮</a></li> -->
             </ul>
         </div>
-    </header>
+    </headr>
     <!-- 按钮 -->
     <div class="back">
-        <a href="#" class="fa fa-arrow-circle-up backBtn"></a>
+        <a href="#" class="fa fa-arrow-circle-up"></a>
     </div>
     <!-- 主体部分 -->
     <main id="main">
         <ul class="mui-table-view">
-            <!-- <li class="mui-table-view-cell mui-media">
+            <li class="mui-table-view-cell mui-media">
                 <a href="javascript:;">
+                    <!-- 媒体信息左侧 -->
                     <img class="mui-media-object mui-pull-left product-left" src="images/a561b538ly1fxlc0d98beg204t0671kx.gif">
+                    <!-- 媒体信息右侧 -->
                     <div class="mui-media-body product-right">
                         <p class='mui-ellipsis'>哈哈哈,干嘛都快来烦恼都看见了富士康鸡年快乐技能数据库繁花似锦</p>
                         <div class="price">
@@ -66,7 +70,7 @@
                         </div>
                     </div>
                 </a>
-            </li> -->
+            </li>
         </ul>
     </main>
     <!-- 底部部分 -->
@@ -82,27 +86,14 @@
             <p>m.manmanbuy.com </p>
         </div>
     </footer>
-     <!-- 导航菜单 -->
-     <div class="navbar">
-		<ul class="menu">
-			<li><a href="index.html" class=""><img src="./images//home (1).png" alt=""></a></li>
-			<li><a href="productDetails.html" class="fa"><img src="./images/ic_search.png" alt=""></a></li>
-			<li><a href="moneyctrl.html" class=""><img src="./images/haitao.png" alt=""></a></li>
-			<li><a href="baicaijia.html" class=""><img src="./images/ic_bcj.png" alt=""></a></li>
-			<li><a href="gsproduct.html" class=""><img src="./images//ic_coudanpin.png" alt=""></a></li>
-			<li><a href="moneyctrl.html" class=""><img src="./images//ic_cu.png" alt=""></a></li>
-			<li><a href="category.html" class=""><img src="./images//ic_kb.png" alt=""></a></li>
-			<li><a href="brandtitle.html" class=""><img src="./images//ic_pp.png" alt=""></a></li>
-			<li><a href="sitenav.html" class=""><img src="./images/ic_mall.png" alt=""></a></li>
-		</ul>
-	</div>
+
 </body>
 
 </html>
 <!-- 创建菜单模板 -->
 <script type="text/html" id="productMenu">
-    {{each result value index}}
-        <li data-id="{{value.titleId}}" class="{{index == 0?'active':''}}"><a href="#">{{value.title}}</a></li>
+    {{each result value}}
+        <li data-id="{{value.titleId}}"><a href="#">{{value.title}}</a></li>
     {{/each}}
 </script>
 
@@ -144,4 +135,3 @@
 <script src="lib/zepto/zepto.min.js"></script>
 <!-- 引入白菜价的js文件 -->
 <script src="js/baicaijia.js"></script>
-<script src="js/base.js"></script>

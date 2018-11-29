@@ -165,13 +165,14 @@ body {
   width: 100%;
   padding-left: 0.1rem;
 }
-#header .one .download {
-  border: none;
+#header .one .menu {
   color: #fff;
-  background-color: #fe4a65;
   padding: 0 0.1rem;
-  line-height: 0.44rem;
   display: block;
+  line-height: 0.44rem;
+}
+#header .one .menu i {
+  font-size: 0.2rem;
 }
 #header .nav {
   background-color: #fff;
@@ -232,14 +233,14 @@ body {
   height: 0.14rem;
   border: 1px solid #ee0000;
   position: relative;
-  border-radius: .12rem;
+  border-radius: .05rem;
   margin-right: .05rem;
 }
 #main li .product-right .discounts .bar i em {
   display: block;
   background-color: #ee0000;
   height: 100%;
-  border-radius: .1rem;
+  border-radius: .05rem;
 }
 #main li .product-right .discounts .bar i span {
   font-size: .12rem;
@@ -252,10 +253,11 @@ body {
 #main li .product-right .num {
   display: flex;
   justify-content: space-between;
-  font-size: 0.12rem;
+  font-size: 0.14rem;
   bottom: .05rem;
 }
 #main li .product-right .num a:nth-child(1) {
+  padding: 0.02rem;
   display: block;
   border: 0.01rem solid #ee0000;
   background-color: #fff;
@@ -264,6 +266,7 @@ body {
 #main li .product-right .num a:nth-child(2) {
   position: absolute;
   right: 0.1rem;
+  padding: 0.02rem;
   display: block;
   background-color: #ee0000;
   color: #fff;
@@ -272,9 +275,8 @@ body {
 }
 .back .fa-arrow-circle-up {
   font-size: .55rem;
-  bottom: 0;
+  bottom: 2rem;
   right: .2rem;
   color: #fe4a65;
   position: fixed;
-  z-index: 1;
 }
