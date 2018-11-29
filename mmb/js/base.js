@@ -202,3 +202,6 @@ $(function(){
     testEl = null
   })(Zepto)
 })
+    window.addEventListener('resize', setNowFontSize);
+    
+})
