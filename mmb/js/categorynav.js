@@ -2,9 +2,9 @@ $(function() {
     var mmb = new MMB();
     mmb.getcategorytitle();
     mmb.productlist();
-    // console.log(mmb);
+    mmb.muibugfix();
+    console.log(mmb);
 })
-
 
 // 创建一个慢慢卖的构造函数
 var MMB = function() {};
@@ -20,17 +20,17 @@ MMB.prototype = {
                 var html = template('categorytitleTpl', data);
                 $('.categorybox').html(html);
                 // console.log($('.categoryli'));
-                $('.categoryli').on('tap',function(){
-                  // console.log($(this).parent('.mui-active').length);  
-                  if($(this).parent('.mui-active').length){
-                  $('.categoryli').find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');
-                  }else{
-                    $('.categoryli').find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');
-                  }
+                $('.categoryli').on('tap', function() {
+                        // console.log($(this).parent('.mui-active').length);  
+                        if ($(this).parent('.mui-active').length) {
+                            $('.categoryli').find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');
+                        } else {
+                            $('.categoryli').find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');
+                        }
 
-                
-                })
-                // 遍历id 循环渲染
+
+                    })
+                    // 遍历id 循环渲染
                 var title = $('.topproductnavtitle');
                 var titleidlist = [];
                 for (var i = 0; i < title.length; i++) {
@@ -46,7 +46,6 @@ MMB.prototype = {
                     that.getcategory(titleidlist[i])
                 };
             }
-
         })
     },
     //渲染商品列表
@@ -56,63 +55,29 @@ MMB.prototype = {
             data: { titleid: id },
             success: function(data) {
                 // console.log(data);
-            var html = template('categorylistTpl', data);
-            $('.categorylist' + id).html(html);
+                var html = template('categorylistTpl', data);
+                $('.categorylist' + id).html(html);
             }
         })
     },
     //商品点击跳转列表 传参
-    productlist: function(){
-      $('.categorybox').on('tap','.btn-product',function(){
-       var categoryId = $(this).attr('data-categoryId');
-       var title = $(this).parent().attr('data-title');
-       title = title.replace(/\s/g, '');
-       // console.log(title);
-       // alert("categoryId="+categoryId+"titleId="+titleId)
-        location = "productList.html?categorytitle="+title+"&categoryId="+categoryId
-      })
+    productlist: function() {
+        $('.categorybox').on('tap', '.btn-product', function() {
+            var categoryId = $(this).attr('data-categoryId');
+            var title = $(this).parent().attr('data-title');
+            title = title.replace(/\s/g, '');
+            // console.log(title);
+            // alert("categoryId="+categoryId+"titleId="+titleId)
+            // location = "productList.html?categorytitle="+title+"&categoryId="+categoryId
+        })
+    },
+    //muibug修复
+    muibugfix: function() {
+        $('.categorybox').on('click', '.nomask', function() {
+            // console.log(555);
+            $('.nomask').css({
+                backgroundColor: "#fff"
+            })
+        });
     }
-
-    
 }
-
-
-
-
-
-
-
-
-// $(function () {
-//  var mmb = new MMB();
-//  mmb.getIndexMenu();
-//  mmb.getDiscountProduct();
-// });
-
-// var MMB = function () {
-
-// }
-// MMB.prototype = {
-//  baseURL:'http://localhost:9090',
-//获取首页菜单的函数
-// getIndexMenu:function () {
-//  $.ajax({
-//    url:this.baseURL+'/api/getindexmenu',
-//    success:function (data) {
-//      var html = template('indexMenuTpl',data);
-//      $('#nav .mui-row').html(html);
-//    }
-//  })
-// },
-//获取首页折扣商品
-//  getDiscountProduct:function () {
-//    $.ajax({
-//      url:this.baseURL+'/api/getmoneyctrl',
-//      success:function (data) {
-//        console.log(data);
-//        var html = template('discountProductTpl',data);
-//        $('#productList .content ul').html(html);
-//      }
-//    })
-//  }
-// }
