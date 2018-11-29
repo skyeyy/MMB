@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scale=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>最新优惠 - 省钱控 - 慢慢买</title>
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet/less" href="less/moneyctrl.less">
     <script src="lib/less/less.js"></script>
-    <script src="./js/base.js"></script>
+   
 </head>
 
 <body>
@@ -38,6 +38,7 @@
             </ul>
         </div>
     </header>
+  
     <!-- 商品列表 -->
     <main id="main">
         <ul class="mui-table-view goods-list">
@@ -128,6 +129,20 @@
             <p>m.manmanbuy.com </p>
         </div>
     </footer>
+    <!-- 导航球 -->
+    <div class="navbar">
+		<ul class="menu">
+			<li><a href="index.html" class=""><img src="./images//home (1).png" alt=""></a></li>
+			<li><a href="productDetails.html" class="fa"><img src="./images/ic_search.png" alt=""></a></li>
+			<li><a href="moneyctrl.html" class=""><img src="./images/haitao.png" alt=""></a></li>
+			<li><a href="baicaijia.html" class=""><img src="./images/ic_bcj.png" alt=""></a></li>
+			<li><a href="gsproduct.html" class=""><img src="./images//ic_coudanpin.png" alt=""></a></li>
+			<li><a href="moneyctrl.html" class=""><img src="./images//ic_cu.png" alt=""></a></li>
+			<li><a href="category.html" class=""><img src="./images//ic_kb.png" alt=""></a></li>
+			<li><a href="brandtitle.html" class=""><img src="./images//ic_pp.png" alt=""></a></li>
+			<li><a href="sitenav.html" class=""><img src="./images/ic_mall.png" alt=""></a></li>
+		</ul>
+	</div>
     <!-- 生成模板 -->
     <script id="goodslistTpl" type="text/html">
         {{ each result value }}
@@ -150,6 +165,7 @@
     <script src="lib/artTemplate/template-web.js"></script>
     <script src="lib/mui/js/mui.js"></script>
     <script src="lib/zepto/zepto.min.js"></script>
+    <script src="./js/base.js"></script>
     <script src="js/moneyctrl.js"></script>
 </body>
 
