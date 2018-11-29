@@ -133,7 +133,6 @@ body {
 #footer .content .download {
   color: #ff6c00;
 }
-
 .navbar {
   width: 30px;
   height: 30px;
@@ -258,4 +257,3 @@ body {
   transition-delay: 0.36s;
   transform: rotate(315deg);
 }
-
