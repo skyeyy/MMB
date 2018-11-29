@@ -51,7 +51,9 @@ MMB.prototype = {
                 var html = template('productListTpl', data);
                 $('.product-List').html(html);
                 that.pageCount = Math.ceil(data.totalCount / data.pagesize);
-                that.initPage();              
+                that.initPage();
+                // $('.mui-scroll').attr('style', '');
+                
             }
         });
     },
@@ -129,6 +131,8 @@ MMB.prototype = {
         $.ajax({
             url: "http://localhost:9090/api/getcategorytitle",
             success: function (data) {
+
+
                 var html = '';
                 for (var i = 0; i < data.result.length; i++) {
                     html += "<button type='button' class='getCategorytitle' data-titleid='" + data.result[i].titleId + "'>" + data.result[i].title + "</button>";
@@ -142,6 +146,7 @@ MMB.prototype = {
                             titleid: titleId
                         },
                         success: function (data) {
+                            console.log(data);
                             html = '';
                             for (var i = 0; i < data.result.length; i++) {
                                 html += "<button type='button' class='getCategory' data-categoryid='" + data.result[i].categoryId + "'>" + data.result[i].category + "</button>";
