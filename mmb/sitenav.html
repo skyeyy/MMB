@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/sitenav.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <a class="fa fa-chevron-left" href="index.html"></a>
+        <h4>商城导航</h4>
+        <a href="#" class="header-app">
+            <img src="./images/header_app.png" alt="">
+        </a>
+
+    </header>
+
+    <main id="main">
+        <div class="shop-nav clearfix">
+            <a href="#">
+                <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+                <span>京东商城</span>
+            </a>
+
+    </main>
+
+    <section id="footer-nav">
+        <span>
+            <a href="index.html">首页</a>
+            <span>&gt;商城导航</span>
+        </span>
+    </section>
+    <footer id="footer">
+        <div class="footer-top">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#header" class="return-top">
+                <i class="fa fa-arrow-up"></i>返回顶部
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a class="download" href="#">手机APP下载</a>
+                <a href="idnex.html">慢慢买手机版&nbsp;--&nbsp;掌上比价平台</a>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <script id="getsitenavTpl" type="text/html">
+        {{ each result value }}
+        <a href="{{ value.navHref }}">
+            <img src="{{ value.navImg }}" alt="">
+            <span>{{ value.navTitle }}</span>
+        </a>
+        {{ /each }}
+    </script>
+
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 模板 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/sitenav.js"></script>
+</body>
+
+</html>

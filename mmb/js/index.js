@@ -33,6 +33,8 @@ class MMB {
                 $("#nav ul").html(html);
                 $('.more').on("tap",function(){
                     $('.more').nextAll().toggle();
+                    $('#nav li').removeClass('good');
+                    $('#nav li').addClass('good');
                 })
             }
         });

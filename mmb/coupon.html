@@ -69,7 +69,7 @@
     <script id="couponMessageTpl" type="text/html">
         {{each result value}}
             <div class="mui-col-xs-4">
-                <a href="http://127.0.0.1:5500/mmb/{{value.couponLink}}?couponId={{value.couponId}}">
+                <a href="http://127.0.0.1:5500/{{value.couponLink}}?couponId={{value.couponId}}">
                     <img src="{{value.couponImg}}" alt="">
                     <p>{{value.couponTitle}}</p>
                 </a>

@@ -1,0 +1,195 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+
+img {
+    /* 去除图片和块级元素的3px间隙问题 */
+    vertical-align: middle;
+    border: none;
+}
+
+html{
+    font-size: 100px;
+}
+body{
+    background-color: #F1F1F1;
+    padding: .45rem 0 0;
+}
+
+i{
+    font-style: normal;
+}
+a{
+    color: #000;
+}
+
+
+
+#header {
+    top: 0;
+    display: flex;
+    background-color: rgb(255, 78, 73);
+    position: fixed;
+    width: 100%;
+    height: .45rem;
+    line-height: .45rem;
+    z-index: 999;
+    .fa-chevron-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.45rem;
+        height: 0.45rem;
+        line-height: 0.45rem;
+        color: #fff;
+        font-size: .2rem;
+        padding-left: .1rem;    
+    }
+    h4 {
+        margin: 0 auto;
+        color: #fff;
+        line-height: .45rem;
+        font-weight: normal;
+        font-size: .2rem;
+    }
+    .header-app {
+        position: absolute;
+        right: .1rem;
+        img {
+            height: .35rem;
+        }
+    }
+    
+}
+
+#main {
+    padding: .2rem 0 0;
+    .shop-nav {
+        width: 3.2rem;  
+        margin: 0 auto;
+        a {
+            display: block;
+            top: 1.5rem;
+            padding: .1rem .08rem;
+            background-color: #f4f4f4;
+            border: 1px solid #bfbfbf;
+            border-radius: 3px;
+            float: left;
+            margin: 0 0 .05rem .05rem;
+            color: #000;
+            font-size: .14rem;
+
+            // animation: move 1.5s ease-in-out both;
+            img {
+                margin-right: .05rem;
+            }
+            &:nth-child(n) {
+                animation: move 1.5s  ease-in-out both;
+            }
+            &:nth-child(n+4) {
+                animation: move 1.5s .2s ease-in-out both;
+            }
+            &:nth-child(n+7) {
+                animation: move 1.5s .4s ease-in-out both;
+            }
+            &:nth-child(n+10) {
+                animation: move 1.5s .6s ease-in-out both;
+            }
+            &:nth-child(n+13) {
+                animation: move 1.5s .8s ease-in-out both;
+            }
+            &:nth-child(n+16) {
+                animation: move 1.5s 1s ease-in-out both;
+            }
+            &:nth-child(n+19) {
+                animation: move 1.5s 1.2s ease-in-out both;
+            }
+            &:nth-child(n+22) {
+                animation: move 1.5s 1.4s ease-in-out both;
+            }
+            &:nth-child(n+25) {
+                animation: move 1.5s 1.6s ease-in-out both;
+            }
+            &:nth-child(n+28) {
+                animation: move 1.5s 1.8s ease-in-out both;
+            }
+        }
+    } 
+}
+
+#footer-nav {
+    height: .4rem;
+    line-height: .4rem;
+    background: linear-gradient(#fff, #ebebeb);
+    border-top: 1px solid #ebebeb;
+    padding-left: .1rem;
+    font-size: 14px;
+    margin-top: .3rem;
+}
+
+#footer {
+    background-color: #232a34;
+    height: 1rem; 
+    .footer-top {
+        display: flex;
+        height: .4rem;
+        line-height: .4rem;
+        font-size: 14px;
+        border: 1px solid #727272;
+        a {
+            border-right: 1px solid #727272;
+            flex: 1;
+            text-align: center;
+            color: #fff;
+            &.return-top {
+                border: none;
+            }   
+        }
+    }
+    .footer-bottom {
+        font-size: 12px;
+        height: .6rem;
+        text-align: center;
+        padding-top: .1rem;
+        p {
+            margin-bottom: 0;
+            a {
+                color: #bebebe;
+            }
+            .download {
+                color: #ff4e49; 
+            }
+        }
+    }
+}
+
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}
+

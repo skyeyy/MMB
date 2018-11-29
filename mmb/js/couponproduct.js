@@ -40,7 +40,7 @@ Mmb.prototype = {
         var that = this;
         $('.product-list').on('tap', 'li', function () {
             $('.mask').css("display", "block");
-
+            $("body").css("overflow","hidden");
             that.getCouponProduct(function (data) {
                 var html = template("sliderTpl", data);
                 $('#slide .mui-slider').html(html);
@@ -57,6 +57,8 @@ Mmb.prototype = {
     maskClose: function () {
         $(".mask .close").on('tap', function () {
             $('.mask').css("display", "none");
+            
+            $("body").css("overflow","auto");
         })
     },
     
