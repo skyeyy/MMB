@@ -107,17 +107,36 @@
             <p>m.manmanbuy.com </p>
         </div>
     </footer>
+    <!-- 导航菜单 -->
+    <div class="navbar">
+		<ul class="menu">
+			<li><a href="index.html" class=""><img src="./images//home (1).png" alt=""></a></li>
+			<li><a href="productDetails.html" class="fa"><img src="./images/ic_search.png" alt=""></a></li>
+			<li><a href="moneyctrl.html" class=""><img src="./images/haitao.png" alt=""></a></li>
+			<li><a href="baicaijia.html" class=""><img src="./images/ic_bcj.png" alt=""></a></li>
+			<li><a href="gsproduct.html" class=""><img src="./images//ic_coudanpin.png" alt=""></a></li>
+			<li><a href="moneyctrl.html" class=""><img src="./images//ic_cu.png" alt=""></a></li>
+			<li><a href="category.html" class=""><img src="./images//ic_kb.png" alt=""></a></li>
+			<li><a href="brandtitle.html" class=""><img src="./images//ic_pp.png" alt=""></a></li>
+			<li><a href="sitenav.html" class=""><img src="./images/ic_mall.png" alt=""></a></li>
+		</ul>
+	</div>
     <script type="text/html" id="maintpl">
+        <!-- {{if result.length<=0}}  -->
+        <!-- <li>  123</li> -->
+        <!-- {{else }} -->
         {{each result value}}
-         <li>
-                <a href="discount-product.html?productid=0" class="event" data-id = "{{value.productId}}">
-                    {{@value.productImg}}
-                    <p class="title">{{value.productName}}</p>
-                    <p class="price">{{value.productPrice}}</p>
-                    <p class="time">{{value.productFrom}}</p>
-                </a>
-            </li>
-        {{/each}}
+        <li>
+               <a href="discount-product.html?productid=0" class="event" data-id = "{{value.productId}}">
+                   {{@value.productImg}}
+                   <p class="title">{{value.productName}}</p>
+                   <p class="price">{{value.productPrice}}</p>
+                   <p class="time">{{value.productFrom}}</p>
+               </a>
+           </li>
+       {{/each}}
+        <!-- {{/if}} -->
+       
     
     </script>
     <script type="text/html" id="navTpl">
@@ -139,6 +158,7 @@
     <script src="./lib/mui/js//mui.min.js"></script>
     <!-- 引入zeptojs -->
     <script src="./lib/zepto//zepto.min.js"></script>
+    <script src="./lib//zepto//zepto-animate.js"></script>
     <!-- 引入模板的js文件 -->
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 引入自己的js文件-->
