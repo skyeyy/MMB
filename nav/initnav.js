@@ -1,9 +1,0 @@
-$(function() {
-    
-});
-
-class Initnav {
-    constructor() {
-        
-    }
-}
