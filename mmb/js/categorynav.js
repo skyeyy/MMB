@@ -68,14 +68,14 @@ MMB.prototype = {
             title = title.replace(/\s/g, '');
             // console.log(title);
             // alert("categoryId="+categoryId+"titleId="+titleId)
-            // location = "productList.html?categorytitle="+title+"&categoryId="+categoryId
+            location = "productList.html?categorytitle="+title+"&categoryId="+categoryId
         })
     },
     //muibug修复
     muibugfix: function() {
         $('.categorybox').on('click', '.nomask', function() {
             // console.log(555);
-            $('.nomask').css({
+            $('.mui-active').css({
                 backgroundColor: "#fff"
             })
         });
