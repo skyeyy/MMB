@@ -17,31 +17,42 @@ $(function(){
         document.documentElement.style.fontSize = nowFontSize + 'px';
     }
 	window.addEventListener('resize', setNowFontSize);
-	move();
+		move();
 	function move(){
 		// 悬浮球的移动
 	    // 声明开始的距离 移动的Y  y的距离  到达的Y
-		var startY = startX = moveY = distanceY = distanceX = currentY = currentX = 0;
+    var startY = startX = moveY = distanceY = distanceX = currentY = currentX = 0;
+    // 声明一个开关思想
+    var kar = false;
 		// 手指按下事件
 		$('.navbar').on('touchstart', function (e) {
 			startY = e.touches[0].clientY
-			startX = e.touches[0].clientX
+      startX = e.touches[0].clientX
+      console.log('点击'+startX,startY);
+      
 		})
 		// 移动事件
 		$('.navbar').on('touchmove', function (e) {
-			console.log(e);
+           
 			// 滑动的距离减去开始距离
 			moveX = e.touches[0].clientX;
 			moveY = e.touches[0].clientY;
 			distanceY = moveY - startY;
-			distanceX = moveX - startX;
+      distanceX = moveX - startX;
+      console.log("移动"+distanceX,distanceY);
+      
 			$(this).css({
 				transform: 'translate(' + (distanceX + currentX) + 'px,' + (distanceY + currentY) + 'px)'
-			});
+				// transform: 'translate(' + distanceX + 'px,' + distanceY + 'px)'
+      });
+      kar = true;
 		})
-		$('.navbar').on('touchend', function (e) {
-			currentY += distanceY;
-			currentX += distanceX;
+		$('.navbar').on('touchend', function () {
+      if(kar) {
+        currentY = currentY + distanceY;
+        currentX += distanceX;
+      }
+      kar = false;
 		})
 		// 开关思想
 		var i = 0;
@@ -65,6 +76,7 @@ $(function(){
 			}
 		})
 	}
+	
 	
     //     Zepto.js
 //     (c) 2010-2016 Thomas Fuchs

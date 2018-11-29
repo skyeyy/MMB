@@ -2,7 +2,7 @@ html {
   font-size: 100px;
 }
 body {
-  padding-top: .85rem;
+  padding-top: 0.85rem;
 }
 img {
   vertical-align: middle;
@@ -30,55 +30,55 @@ body {
   top: 0;
   left: 0;
   background-color: #fff;
-  height: .85rem;
+  height: 0.85rem;
   z-index: 999;
 }
 #header .top {
   display: flex;
-  padding: .1rem;
+  padding: 0.1rem;
   border-bottom: 1px solid #ddd;
-  height: .45rem;
+  height: 0.45rem;
 }
 #header .top .logo {
-  width: .8rem;
+  width: 0.8rem;
 }
 #header .top .logo img {
   width: 100%;
 }
 #header .top form {
   flex: 1;
-  padding: 0 .1rem;
+  padding: 0 0.1rem;
   position: relative;
 }
 #header .top form input {
   width: 100%;
-  border-radius: .2rem;
-  height: .24rem;
+  border-radius: 0.2rem;
+  height: 0.24rem;
   background-color: #f9f9f9;
-  font-size: .14rem;
-  padding: 0 0 0 .35rem;
+  font-size: 0.14rem;
+  padding: 0 0 0 0.35rem;
   text-align: left;
   margin-bottom: 0;
 }
 #header .top form .fa-search {
   position: absolute;
-  top: .04rem;
-  left: .24rem;
+  top: 0.04rem;
+  left: 0.24rem;
   color: #c8c8c8;
 }
 #header .top .download {
-  width: .38rem;
-  height: .24rem;
+  width: 0.38rem;
+  height: 0.24rem;
   border: 1px solid #f85000;
   border-radius: 12px;
   color: #f85000;
-  font-size: .14rem;
+  font-size: 0.14rem;
   text-align: center;
-  line-height: .24rem;
+  line-height: 0.24rem;
 }
 #header .nav {
   border-bottom: 1px solid #ddd;
-  height: .4rem;
+  height: 0.4rem;
 }
 #header .nav ul {
   overflow: auto;
@@ -89,8 +89,8 @@ body {
 }
 #header .nav ul li {
   display: inline-block;
-  padding: .1rem;
-  font-size: .15rem;
+  padding: 0.1rem;
+  font-size: 0.15rem;
 }
 #header .nav ul li a {
   color: #000;
@@ -105,29 +105,29 @@ body {
   content: "";
   left: 0;
   right: 0;
-  height: .04rem;
+  height: 0.04rem;
   background-color: #f9702e;
   position: absolute;
   bottom: -0.1rem;
 }
 #footer {
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   background-color: #efefef;
 }
 #footer .top {
   border-top: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
   text-align: center;
-  font-size: .14rem;
-  height: .34rem;
-  line-height: .34rem;
+  font-size: 0.14rem;
+  height: 0.34rem;
+  line-height: 0.34rem;
 }
 #footer .top div:nth-child(n+2) {
   border-left: 0.01rem solid #dadada;
 }
 #footer .content {
-  padding: .15rem 0;
-  font-size: .12rem;
+  padding: 0.15rem 0;
+  font-size: 0.12rem;
   text-align: center;
 }
 #footer .content .download {
@@ -139,11 +139,17 @@ body {
   border-radius: 50%;
   background: #fff;
   position: fixed;
-  top: .7rem;
-  left: .1rem;
+  top: 0.7rem;
+  left: 0.1rem;
   z-index: 9999;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
+}
+.navbar a {
+  display: block;
+}
+.navbar img {
+  width: 100%;
 }
 .navbar.click {
   background-color: rgba(0, 0, 0, 0.6);
@@ -251,12 +257,6 @@ body {
   transition-delay: 0.36s;
   transform: rotate(315deg);
 }
-a {
-  display: block;
-}
-img {
-  width: 100%;
-}
 /* 主体部分样式 */
 body {
   padding: 0;
@@ -279,42 +279,42 @@ body {
 }
 .mui-scroll #nav h4 {
   margin: 0;
-  padding: .1rem 0;
+  padding: 0.1rem 0;
   text-align: center;
 }
 .mui-scroll #nav button {
-  margin: .05rem;
+  margin: 0.05rem;
 }
 #main {
   background-color: #fff;
-  padding-top: .85rem;
+  padding-top: 0.85rem;
 }
 #main .mui-row {
   background-color: #faf4f4;
 }
 #main .mui-row > div {
   text-align: center;
-  padding: .1rem 0;
+  padding: 0.1rem 0;
 }
 #main .mui-row > div.left {
   text-align: left;
-  padding-left: .05rem;
+  padding-left: 0.05rem;
   display: flex;
 }
 #main .mui-row > div.left span {
-  padding: .06rem 0;
+  padding: 0.06rem 0;
 }
 #main .mui-row > div.left a {
   margin: 0 0.05rem;
   color: #666;
 }
 #main .mui-row > div.right {
-  padding: .05rem 0;
+  padding: 0.05rem 0;
 }
 #main .mui-row > div.right button {
-  border-radius: .05rem;
+  border-radius: 0.05rem;
   margin-right: -25px;
-  padding: .05rem;
+  padding: 0.05rem;
   background-color: #faf4f4;
 }
 #main .mui-table-view::before,
@@ -339,23 +339,23 @@ body {
 }
 #main .mui-table-view li .price {
   color: #ed0000;
-  font-size: .18rem;
+  font-size: 0.18rem;
 }
 #main .mui-table-view li .other {
-  margin-top: .04rem;
-  font-size: .12rem;
+  margin-top: 0.04rem;
+  font-size: 0.12rem;
 }
 #main .mui-table-view li img {
   max-width: 1.6rem;
-  max-height: 1.0rem;
-  margin-right: .1rem;
+  max-height: 1rem;
+  margin-right: 0.1rem;
 }
 #main #page {
   background-color: #f2f2f2;
-  padding: .1rem 0;
+  padding: 0.1rem 0;
 }
 #main #about {
-  padding-left: .05rem;
+  padding-left: 0.05rem;
   background-color: #f2f2f2;
 }
 #main #about h4 {
@@ -364,7 +364,7 @@ body {
 }
 #main #about p {
   margin: 0;
-  padding: .1rem 0;
+  padding: 0.1rem 0;
 }
 .bt {
   border-top: 1px solid #c4c4c4;
@@ -383,13 +383,14 @@ body {
 }
 #goTop {
   position: fixed;
+  z-index: 999;
   bottom: 0.1rem;
-  right: .1rem;
+  right: 0.1rem;
   width: 0.44rem;
   height: 0.44rem;
   border-radius: 50%;
   background-color: #fff;
-  background-image: url('../images/icon_bar.png');
+  background-image: url('/images/icon_bar.png');
   background-size: 220px 132px;
   background-position: -132px 0px;
 }

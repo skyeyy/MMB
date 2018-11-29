@@ -6,6 +6,7 @@ $(function () {
     mmb.categoryul();
     mmb.getProductList();
     mmb.getAClick();
+    mmb.goTop();
 })
 
 var MMB = function () {
@@ -192,5 +193,10 @@ MMB.prototype = {
             a = this.cloneNode(true);
             a.click();
         })
+    },
+    goTop:function() {
+        $('#goTop').on('tap',function() {
+            mui('.mui-content.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
+        });
     }
 }
