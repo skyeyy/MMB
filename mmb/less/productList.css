@@ -133,7 +133,6 @@ body {
 #footer .content .download {
   color: #ff6c00;
 }
-
 .navbar {
   width: 30px;
   height: 30px;
@@ -258,7 +257,6 @@ body {
   transition-delay: 0.36s;
   transform: rotate(315deg);
 }
-
 /* 主体部分样式 */
 body {
   padding: 0;
@@ -300,13 +298,15 @@ body {
 }
 #main .mui-row > div.left {
   text-align: left;
-
   padding-left: 0.05rem;
   display: flex;
-  padding-left: .05rem;
 }
 #main .mui-row > div.left span {
   padding: 0.06rem 0;
+}
+#main .mui-row > div.left a {
+  margin: 0 0.05rem;
+  color: #666;
 }
 #main .mui-row > div.right {
   padding: 0.05rem 0;
@@ -331,6 +331,7 @@ body {
   font-size: 15px;
   line-height: 28px;
   height: 56px;
+  white-space: pre-wrap;
   overflow: hidden;
   -webkit-line-clamp: 2;
   display: -webkit-box;
@@ -345,14 +346,9 @@ body {
   font-size: 0.12rem;
 }
 #main .mui-table-view li img {
-
   max-width: 1.6rem;
   max-height: 1rem;
   margin-right: 0.1rem;
-
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: .1rem;
 }
 #main #page {
   background-color: #f2f2f2;
