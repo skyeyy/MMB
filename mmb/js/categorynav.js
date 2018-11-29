@@ -16,12 +16,19 @@ MMB.prototype = {
         $.ajax({
             url: 'http://localhost:9090/api/getcategorytitle',
             success: function(data) {
-                console.log(data);
+                // console.log(data);
                 var html = template('categorytitleTpl', data);
                 $('.categorybox').html(html);
                 // console.log($('.categoryli'));
                 $('.categoryli').on('tap',function(){
-                 $(this).find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');;
+                  // console.log($(this).parent('.mui-active').length);  
+                  if($(this).parent('.mui-active').length){
+                  $('.categoryli').find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');
+                  }else{
+                    $('.categoryli').find('.icondownup').toggleClass('mui-icon-arrowup').toggleClass('mui-icon-arrowdown');
+                  }
+
+                
                 })
                 // 遍历id 循环渲染
                 var title = $('.topproductnavtitle');
