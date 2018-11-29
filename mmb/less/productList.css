@@ -131,102 +131,133 @@ body {
 #footer .content .download {
   color: #ff6c00;
 }
-#main #nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 0;
+/* 主体部分样式 */
+body {
+  padding: 0;
 }
-#main #nav ul li {
-  width: 25%;
-  padding: 5px 0;
+.mui-scroll {
+  min-height: 101%;
+  height: auto;
+  position: relative;
+  background-color: #fff;
 }
-#main #nav ul li a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.mui-scroll #nav {
+  width: 100%;
+  height: auto;
+  background-color: #fff !important;
+  z-index: 999;
+  opacity: 1;
 }
-#main #nav ul li a img {
-  width: 50px;
+.mui-scroll #nav p {
+  padding: 0.1rem;
 }
-#main #nav ul li a p {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-#main #content .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ff9d1e;
-  color: #fff;
-  height: .35rem;
-  padding: 0 .05rem;
-}
-#main #content .title span {
-  font-weight: 600;
-}
-#main #content .title img {
-  width: .2rem;
-  height: .2rem;
-}
-#main #content ul li {
-  padding: .1rem .05rem;
-  border-bottom: 1px solid #dadada;
-}
-#main #content ul li a {
-  display: flex;
-}
-#main #content ul li a .left {
-  width: 120px;
+.mui-scroll #nav h4 {
+  margin: 0;
+  padding: .1rem 0;
   text-align: center;
 }
-#main #content ul li a .left img {
-  width: 106px;
+.mui-scroll #nav button {
+  margin: .05rem;
 }
-#main #content ul li a .right {
-  flex: 1;
+#main {
+  background-color: #fff;
+  padding-top: .85rem;
 }
-#main #content ul li a .right .product-name {
-  font-size: .14rem;
-  color: #333;
-  line-height: 19px;
-  min-height: 57px;
+#main .mui-row {
+  background-color: #faf4f4;
 }
-#main #content ul li a .right .releated {
+#main .mui-row > div {
+  text-align: center;
+  padding: .1rem 0;
+}
+#main .mui-row > div.left {
+  text-align: left;
+  padding-left: .05rem;
+}
+#main .mui-row > div.left span {
+  padding: .06rem 0;
+}
+#main .mui-row > div.right {
+  padding: .05rem 0;
+}
+#main .mui-row > div.right button {
+  border-radius: .05rem;
+  margin-right: -25px;
+  padding: .05rem;
+  background-color: #faf4f4;
+}
+#main .mui-table-view::before,
+#main .mui-table-view::after {
+  border: 0;
+  height: 0;
+}
+#main .mui-table-view li a {
+  display: flex;
+}
+#main .mui-table-view li .title {
+  color: black;
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 28px;
+  height: 56px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+#main .mui-table-view li .price {
+  color: #ed0000;
+  font-size: .18rem;
+}
+#main .mui-table-view li .other {
+  margin-top: .04rem;
   font-size: .12rem;
 }
-#main #content ul li a .right .releated .product-from {
-  float: left;
-}
-#main #content ul li a .right .releated .common {
-  float: right;
-}
-#main #content .more-bar {
-  text-align: center;
-  width: 100%;
-  padding: .1rem;
-}
-#main #content .more-bar a {
-  display: block;
-  width: 100%;
-  border: 1px solid #dadada;
-  line-height: .3rem;
-  font-size: 14px;
-  color: #000;
-  background-color: #f4f4f4;
-}
-.footer-top {
-  height: .35rem;
-  line-height: 0.35rem;
-  padding: 0 .05rem;
-  background-color: #ff6c00;
-}
-.footer-top a {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-}
-.footer-top a img {
+#main .mui-table-view li img {
+  width: 1.2rem;
+  height: 1.2rem;
   margin-right: .1rem;
-  margin-top: .08rem;
+}
+#main #page {
+  background-color: #f2f2f2;
+  padding: .1rem 0;
+}
+#main #about {
+  padding-left: .05rem;
+  background-color: #f2f2f2;
+}
+#main #about h4 {
+  margin: 0;
+  font-weight: normal;
+}
+#main #about p {
+  margin: 0;
+  padding: .1rem 0;
+}
+.bt {
+  border-top: 1px solid #c4c4c4;
+}
+.bb {
+  border-bottom: 1px solid #c4c4c4;
+}
+.bl {
+  border-left: 1px solid #c4c4c4;
+}
+.br {
+  border-right: 1px solid #c4c4c4;
+}
+#footer {
+  margin: 0;
+}
+#goTop {
+  position: fixed;
+  bottom: 0.1rem;
+  right: .1rem;
+  width: 0.44rem;
+  height: 0.44rem;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url('../images/icon_bar.png');
+  background-size: 220px 132px;
+  background-position: -132px 0px;
 }

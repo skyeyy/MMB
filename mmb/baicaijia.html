@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+    <!-- 1.引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2.引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入白菜价的less文件 -->
+    <link rel="stylesheet/less" href="less/baicaijia.less">
+    <!-- 4.引入less的编译js文件 -->
+    <script src="lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="one">
+            <a href="baicaijia.html" class="logo">白菜价</a>
+            <div class="search">
+                <form action="#">
+                    <input type="search" placeholder="好宝贝 等你搜">
+                </form>
+            </div>
+            <a href="JavaScript:;" class="menu">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="nav">
+            <ul>
+                <!-- <li><a href="#">全部</a></li>
+                <li><a href="#">9.96包邮</a></li>
+                <li><a href="#">9.96包邮</a></li>
+                <li><a href="#">9.96包邮</a></li>
+                <li><a href="#">9.96包邮</a></li>
+                <li><a href="#">9.96包邮</a></li>
+                <li><a href="#">9.96包邮</a></li> -->
+            </ul>
+        </div>
+    </header>
+    <!-- 按钮 -->
+    <div class="back">
+        <a href="#" class="fa fa-arrow-circle-up"></a>
+    </div>
+    <!-- 主体部分 -->
+    <main id="main">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <!-- 媒体信息左侧 -->
+                    <img class="mui-media-object mui-pull-left product-left" src="images/a561b538ly1fxlc0d98beg204t0671kx.gif">
+                    <!-- 媒体信息右侧 -->
+                    <div class="mui-media-body product-right">
+                        <p class='mui-ellipsis'>哈哈哈,干嘛都快来烦恼都看见了富士康鸡年快乐技能数据库繁花似锦</p>
+                        <div class="price">
+                            券后:¥ <span>55</span>
+                            <del>¥99</del>
+                        </div>
+                        <div class="discounts">
+                            已领<span>751217</span>张
+                        </div>
+                        <div class="num">
+                            <a href="#" class="left">点击领10元优惠券</a>
+                            <a href="#" class="right">下单链接</a>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </main>
+    <!-- 底部部分 -->
+    <footer id="footer">
+        <div class="mui-row top">
+            <div class="mui-col-xs-4"><a href="login.html">登录</a></div>
+            <div class="mui-col-xs-4"><a href="register.html">注册</a></div>
+            <div class="mui-col-xs-4"><a href="#">返回顶部</a></div>
+        </div>
+        <div class="content">
+            <p><a href="https://at.umeng.com/onelink/Pvmmmy" class="download">手机APP下载</a> <a href="index.html">慢慢买手机版</a>
+                -- 掌上比价平台 </p>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<!-- 创建菜单模板 -->
+<script type="text/html" id="productMenu">
+    {{each result value}}
+        <li data-id="{{value.titleId}}"><a href="#">{{value.title}}</a></li>
+    {{/each}}
+</script>
+
+<!-- 创建商品详情模板 -->
+<script type="text/html" id="peoductList">
+    {{each result value}}
+    <li class="mui-table-view-cell mui-media data-id={{value.productId}}">
+        
+            <!-- 媒体信息左侧 -->
+            <div class="mui-media-object mui-pull-left product-left">
+                 {{@value.productImg}}
+            </div>
+            <!-- 媒体信息右侧 -->
+            <div class="mui-media-body product-right">
+                {{@value.productName}}
+                <div class="price">
+                    {{@value.productPrice}}
+                </div>
+                <div class="discounts">
+                    {{@value.productCouponRemain}}
+                </div>
+                <div class="num">
+                   {{@value.productCoupon}}
+                    {{@value.productHref}}
+                </div>
+            </div>
+    </li>
+    {{/each}}
+</script>
+
+
+
+
+<!-- 引入mui的js文件 -->
+<script src="lib/mui/js/mui.min.js"></script>
+<!-- 引入模板js文件 -->
+<script src="lib/artTemplate/template-web.js"></script>
+<!-- 引入zepto.js文件 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<!-- 引入白菜价的js文件 -->
+<script src="js/baicaijia.js"></script>
+<script src="js/base.js"></script>
