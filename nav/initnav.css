@@ -1,0 +1,7 @@
+#nav {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: -webkit-radial-gradient(center,transparent 80%,blue 80%);
+    background: radial-gradient(center,red,blue);
+}

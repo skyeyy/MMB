@@ -1,0 +1,9 @@
+$(function() {
+    
+});
+
+class Initnav {
+    constructor() {
+        
+    }
+}

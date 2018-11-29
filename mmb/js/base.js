@@ -76,52 +76,7 @@ $(function(){
 			}
 		})
 	}
-		// 悬浮球的移动
-	    // 声明开始的距离 移动的Y  y的距离  到达的Y
-		var startY = startX = moveY = distanceY = distanceX = currentY = currentX = 0;
-		// 手指按下事件
-		$('.navbar').on('touchstart', function (e) {
-			startY = e.touches[0].clientY
-			startX = e.touches[0].clientX
-		})
-		// 移动事件
-		$('.navbar').on('touchmove', function (e) {
-			console.log(e);
-			// 滑动的距离减去开始距离
-			moveX = e.touches[0].clientX;
-			moveY = e.touches[0].clientY;
-			distanceY = moveY - startY;
-			distanceX = moveX - startX;
-			$(this).css({
-				transform: 'translate(' + (distanceX + currentX) + 'px,' + (distanceY + currentY) + 'px)'
-			});
-		})
-		$('.navbar').on('touchend', function (e) {
-			currentY += distanceY;
-			currentX += distanceX;
-		})
-		// 开关思想
-		var i = 0;
-		document.getElementsByClassName('navbar')[0].addEventListener('click', function () {
-		   
-			if (i == 0) {
-				$(this).animate({
-					left:'0.5rem',
-					top:   '0.5rem'
-				})
-				this.classList.add('click');
-				i = 1;
-			} else {
-			   
-				this.classList.remove('click');
-				i = 0;
-				$(this).animate({
-					left:'0.1rem',
-					top:   '0.7rem'
-				},)
-			}
-		})
-	}
+	
 	
     //     Zepto.js
 //     (c) 2010-2016 Thomas Fuchs
