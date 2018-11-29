@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网--品牌大全十大品牌</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="less/brand-content.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="top">
+            <a href="index.html" class="logo">
+                <img src="http://static.manmanbuy.com/m/img/mlogo.png">
+            </a>
+            <form>
+                <input type="search" class="search" placeholder="商品比价、查历史价">
+                <i class="fa fa-search"></i>
+            </form>
+            <a href="#" class="download">下载</a>
+        </div>
+    </header>
+    <!-- 主体 -->
+    <main id="main">
+        <!-- 目录 -->
+        <section class="directory">
+            <p><a href="./index.html">首页</a><span>></span><a href="./brandTitle.html">全部分类</a></p>
+        </section>
+        <!-- 排行标题 -->
+        <section class="title mui-segmented-control">
+            <a class="mui-control-item mui-active" href="#item1">
+                商品品牌排行
+            </a>
+            <a class="mui-control-item" id="tab2" href="#item2">
+                销量排行
+            </a>
+            <a class="mui-control-item" id="tab3" href="#item3">
+                最新评论
+            </a>
+        </section>
+        <!-- 排行列表-->
+        <section class="ranking">
+            <div id="item1" class="mui-control-content mui-active">
+                <!-- <a>
+                    <div class="left">
+                        1
+                    </div>
+                    <div class="center">
+                        <p>三星平板电视</p>
+                        <p>30天全网销售: 242408件</p>
+                    </div>
+                    <div class="right">
+                        >
+                    </div>
+                </a> -->
+            </div>
+            <div id="item2" class="mui-control-content">
+            </div>
+            <div id="item3" class="mui-control-content">
+            </div>
+        </section>
+    </main> <!-- 页脚 -->
+    <footer id="footer">
+       
+            <div class="mui-row top">
+                <div class="mui-col-xs-4"><a href="login.html">登录</a></div>
+                <div class="mui-col-xs-4"><a href="register.html">注册</a></div>
+                <div class="mui-col-xs-4"><a href="#">返回顶部</a></div>
+            </div>
+            <div class="content">
+                <p><a href="https://at.umeng.com/onelink/Pvmmmy" class="download">手机APP下载</a> <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台 </p>
+                <p>m.manmanbuy.com </p>
+            </div>
+        </footer>
+
+    <!-- 品牌排行 -->
+    <script id="brandRanktmp" type="text/html">
+        {{each result value index}}
+        <a href="./productList.html?categoryid={{value.categoryId}}&pageid=1">
+            <div class="left">
+                {{index+1}}
+            </div>
+            <div class="center" data-brandtitleid="{{value.brandTitleId}}">
+                <p>{{value.brandName}}</p>
+                <p>{{value.brandInfo}}</p>
+            </div>
+            <div class="right">
+                >
+            </div>
+        </a>
+        {{/each}}
+    </script>
+    <!-- 销量排行 -->
+    <script id="salesRanktmp" type="text/html">
+        {{each result value index}}
+            <a href="./productDetails.html?productId={{value.productId}}">
+                <div class="itme2-left">{{@value.productImg}}</div>
+                <div class="item2-right">
+                   <p>{{value.productName}}</p>
+                   <p><span>{{value.productPrice}}</span><span>⭐⭐⭐⭐⭐</span></p>
+                   <p>{{value.productQuote}} {{value.productCom}}</p>
+                </div>
+        </a>
+        {{/each}}
+    </script>
+    <!-- 最新评论 -->
+    <script id="commentNewtmp" type="text/html">
+        {{each result value index}}
+            <a href="./productDetails.html?productId={{value.productId}}">
+                <div class="item3-top">{<img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg"
+                        alt=""></div>}
+                <div class="item3-bottom">
+                    <p>{{value.comName}}</p>
+                    <p><span>⭐⭐⭐⭐⭐</span><span>{{value.comTime}}</span></p>
+                    <p>{{value.comContent}}</p>
+                    <p>购买自: {{value.comFrom}}</p>
+                </div>
+            </a>
+        {{/each}}
+    </script>
+
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="js/brand-content.js"></script>
+</body>
+
+</html>

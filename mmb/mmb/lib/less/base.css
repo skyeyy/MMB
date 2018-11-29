@@ -1,0 +1,26 @@
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.14rem;
+  padding: 0.45rem 0;
+  background-color: #fff;
+}
+img {
+  vertical-align: middle;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+}
+html,
+body {
+  height: 100%;
+}

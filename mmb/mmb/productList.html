@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="less/productList.less">
+    <script src="lib/less/less.js"></script>
+    <title>商品列表</title>
+</head>
+
+<body>
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+        <!-- 菜单容器 -->
+        <aside class="mui-off-canvas-left">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!-- 菜单具体展示内容 -->
+                        <nav id="nav">
+                            <h4 class="bb">筛选</h4>
+                            <p>全部品牌</p>
+                            <div class="categoryTitleul">
+
+                            </div>
+                            <p>全部分类</p>
+                            <div class="categoryul bb">
+                                <button type="button">默认</button>
+                            </div>
+                            <button type="button" id="getProductList">确认</button>
+                        </nav>
+                    </div>
+                </div>
+        </aside>
+        <!-- 主页面容器 -->
+
+        <div class="mui-inner-wrap">
+
+            <header id="header">
+                <div class="top">
+                    <a href="index.html" class="logo">
+                        <img src="http://static.manmanbuy.com/m/img/mlogo.png">
+                    </a>
+                    <form>
+                        <input type="search" class="search" placeholder="商品比价、查历史价">
+                        <i class="fa fa-search"></i>
+                    </form>
+                    <a href="#" class="download">下载</a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#">省钱控</a></li>
+                        <li><a href="#">查历史价</a></li>
+                        <li class="active"><a href="#">比价搜索</a></li>
+                        <li><a href="#">国内折扣</a></li>
+                        <li><a href="#">白菜价</a></li>
+                        <li><a href="#">小时风云榜</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="mui-content mui-scroll-wrapper">
+
+                <div class="mui-scroll">
+                    <main id="main">
+                        <div class="mui-row">
+                            <div class="mui-col-xs-9 left">
+                                <a href="index.html">首页</a> > <a href="category.html" id="categorytitle">全部分类</a> > <a
+                                    href="productList.html" id="category"></a>
+                                >
+                            </div>
+
+                            <div class="mui-col-xs-3 right">
+                                <button type="button" class="filtrate">筛选</button>
+                            </div>
+                        </div>
+                        <ul class="mui-table-view product-List">
+                        </ul>
+                        <div id="page">
+                        </div>
+                        <div id="about">
+                            <h4>相关链接</h4>
+                            <p><a href="productList.html?title=电视机&categoryid=0">电视机十大品牌</a></p>
+                            <p><a href="productList.html?title=电视机&categoryid=0">电视机口碑大全</a></p>
+                        </div>
+                    </main>
+                    <footer id="footer">
+
+                        <div class="mui-row top">
+                            <div class="mui-col-xs-4"><a href="login.html">登录</a></div>
+                            <div class="mui-col-xs-4"><a href="register.html">注册</a></div>
+                            <div class="mui-col-xs-4"><a href="#">返回顶部</a></div>
+                        </div>
+                        <div class="content">
+                            <p><a href="https://at.umeng.com/onelink/Pvmmmy" class="download">手机APP下载</a> <a href="index.html">慢慢买手机版</a>
+                                -- 掌上比价平台 </p>
+                            <p>m.manmanbuy.com </p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="#" id="goTop"></a>
+    <script id="productListTpl" type="text/html">
+        {{ if result.length > 0 }}
+            {{ each result value }}
+            <li class="mui-table-view-cell mui-media">
+                <a href="productDetails.html?title={{ categorytitle }}&category={{ categoryname }}&productid={{ value.productId }}">
+                        {{@value.productImg }}
+                    <div class="mui-media-body">
+                        <div class="title">{{ value.productName }}</div>
+                        <p class='price'>{{ value.productPrice }}</p>
+                        <p class='other'>
+                            <span class="pull-left">{{ value.productQuote }}</span>
+                            <span class="pull-right">{{ value.productCom }}</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        {{ /each }}
+        {{ else }}
+            <p>没有相关物品</p>
+        {{ /if }}
+        
+    </script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- <script src="js/base.js"></script> -->
+    <script src="js/productList.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+@import "base.less";
+#main {
+    #nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            li {
+                width: 25%;
+                padding: 5px 0;
+                
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        width: 50px;
+                    }
+                    p {
+                        margin-top: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    #content {
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff9d1e;
+            color: #fff;
+            height: .35rem;
+            padding: 0 .05rem;
+            span {
+                font-weight: 600;
+            }
+            img {
+                width: .2rem;
+                height: .2rem;
+            }
+        }
+        ul {
+            li {
+                padding: .1rem .05rem;
+                border-bottom: 1px solid @border-color;
+                a {
+                    display: flex;
+                    .left {
+                        width: 120px;
+                        text-align: center;
+                        img {
+                            width: 106px;
+                        }
+                    }
+                    .right {
+                        flex: 1;
+                        .product-name {
+                            font-size: .14rem;
+                            color: #333;
+                            line-height: 19px;
+                            min-height: 57px;
+                        }
+                        .releated {
+                            font-size: .12rem;
+                            .product-from {
+                                float: left;
+                            }
+                            .common {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .more-bar {
+            text-align: center;
+            width: 100%;
+            padding: .1rem;
+            a {
+                display: block;
+                width: 100%;
+                border: 1px solid @border-color;
+                line-height: .3rem;
+                font-size: 14px;
+                color: #000;
+                background-color: #f4f4f4;
+            }
+        }
+    }
+}
+
+.footer-top {
+    height: .35rem;
+    line-height: 0.35rem;
+    padding: 0 .05rem;
+    background-color: @main-color;
+    a {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        img {
+            margin-right: .1rem;
+            margin-top: .08rem;
+        }
+    }
+}
