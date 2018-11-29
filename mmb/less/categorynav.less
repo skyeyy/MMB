@@ -1,0 +1,57 @@
+@import url(base.less);
+// 搜索
+.bt(){
+	border-top: 1px solid #ccc;
+}
+
+.br(){
+	border-right: 1px solid #ccc;
+}
+.bb(){
+	border-bottom: 1px solid #ccc;
+}
+.bl(){
+	border-left: 1px solid #ccc;
+}
+// 比较导航
+main{
+   padding: 0.08rem;
+
+  .topproductnav {
+     .categorybox{
+         border-radius: 0.06rem;
+         border: 1px solid @border-color;
+        &::before{
+            height: 0;
+        };
+        &::after{
+            height: 0;
+        }
+        .btn-product{
+         font-size:  0.13rem;
+        }
+     }
+    .topproductnavtitle {
+      font-size: 0.16rem;
+    }
+    .mui-table-view {
+        .mui-table-view-cell {
+            .mui-row {
+                .bt();
+                div {
+                    text-align: center;
+                    height: 0.4rem;
+                  line-height: 0.4rem;
+                    .bb();
+                    .br();
+                    &:nth-child(3n){
+                  border-right: 0;
+                }
+                }
+              
+            }
+        }
+    }
+}  
+}
+

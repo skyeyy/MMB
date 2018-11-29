@@ -1,5 +1,4 @@
 $(function() {
-
 	$.ajax({
 		url: "http://localhost:9090/api/getbrandtitle",
 		success: function(data) {
@@ -14,9 +13,6 @@ $(function() {
 			var camera = '';
 			for (var i=0; i<result.length; i++) {
 				if(result[i].brandTitle.indexOf('电视') !=-1){
-					console.log(result[i].brandTitle);
-					console.log(' + result[i].brandTitleId + ');
-//					$('.tv').html('<p><a href="' + result[i].brandTitleId + '">' + result[i].brandTitle + '</a></p>');
 					tv += ('<p><a href="brand-content.html?brandtitleid='+ result[i].brandTitleId + ' ">' + result[i].brandTitle + '</a></p>');
 					$('.tv').html(tv);
 				} else if(result[i].brandTitle.indexOf('空调') !=-1) {
@@ -47,10 +43,7 @@ $(function() {
 			}
 		}
 	});
-	
-	//获取区域滚动的父容器 调用初始化区域滚动插件的函数
     mui('.mui-scroll-wrapper').scroll({
-        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        deceleration: 0.0005
     });
-    
 })
