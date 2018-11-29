@@ -26,22 +26,22 @@
         <div class="nav">
             <div class="shop-list">
                 <ul class="mui-table-view">
-                    <li class="shop" data-shop-id="0">
-                        <a href="#item1" class="mui-control-item normol">
+                    <li class="shop">
+                        <a href="#shop" class="mui-control-item normol">
                             京东
 
                         </a>
                         <i class="fa fa-caret-up"></i>
                     </li>
-                    <li class="city" data-area-id="0">
-                        <a href="#item2" class="mui-control-item">
+                    <li class="area">
+                        <a href="#area" class="mui-control-item">
                             华北
 
                         </a>
                         <i class="fa fa-caret-up"></i>
                     </li>
                     <li class="price">
-                        <a href="#item3" class="mui-control-item">
+                        <a href="#price" class="mui-control-item">
                             全部价格
 
                         </a>
@@ -51,7 +51,7 @@
                 <div class="fa fa-search search"></div>
             </div>
             <div class="secondary">
-                <div id="item1" class="mui-control-content">
+                <div id="shop" class="mui-control-content">
                     <ul class="mui-table-view">
                         <li class="mui-table-view-cell">
                             <a href="#">
@@ -61,11 +61,11 @@
                         </li>
                     </ul>
                 </div>
-                <div id="item2" class="mui-control-content">
+                <div id="area" class="mui-control-content">
                     <ul class="mui-table-view">
                     </ul>
                 </div>
-                <div id="item3" class="mui-control-content">
+                <div id="price" class="mui-control-content">
                     <ul class="mui-table-view">
                     </ul>
                 </div>
@@ -113,8 +113,12 @@
     <script src="./lib/artTemplate/template-web.js"></script>
 
     <script type="text/html" id="getgsshopTpl">
-        {{each result value}}
+        {{each result value index}}
+        {{if index == 0}}
+            <li class="mui-table-view-cell active">
+        {{else}}
             <li class="mui-table-view-cell">
+        {{/if}}
                 <a href="#" data-shop-id="{{value.shopId}}">
                     {{value.shopName}} 
                 </a>
@@ -123,8 +127,12 @@
         {{/each}}
     </script>
     <script type="text/html" id="getgsshopareaTpl">
-        {{each result value}}
+        {{each result value index}}
+        {{if index == 0}}
+            <li class="mui-table-view-cell active">
+        {{else}}
             <li class="mui-table-view-cell">
+        {{/if}}
                 <a href="#" data-area-id="{{value.areaId}}">
                     {{value.areaName}} 
                 </a>
