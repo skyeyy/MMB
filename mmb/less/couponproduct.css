@@ -18,6 +18,9 @@ li {
 a {
   color: #666;
 }
+i {
+  font-style: normal;
+}
 html,
 body {
   height: 100%;
@@ -133,6 +136,7 @@ body {
 }
 body {
   padding-top: .45rem;
+  height: 100%;
 }
 a:active {
   color: #fff;
@@ -159,6 +163,7 @@ a:active {
   line-height: .45rem;
   margin: 0;
   color: #fff;
+  font-size: .18rem;
 }
 #header .download-app {
   padding: 0 .08rem;
@@ -168,6 +173,25 @@ a:active {
   width: .34rem;
   height: .34rem;
 }
+#menu-nav {
+  width: 100%;
+  height: .35rem;
+  margin-top: .2rem;
+  border-top: .01rem solid #ddd;
+  border-bottom: .01rem solid #ddd;
+  line-height: .35rem;
+  background: linear-gradient(to top, #ddd, #fff);
+  padding-left: .1rem;
+}
+#menu-nav a {
+  font-size: .14rem;
+}
+#menu-nav a:active {
+  color: #666;
+}
+#main {
+  padding: .05rem;
+}
 #main .hint {
   font-size: .12rem;
   color: #999;
@@ -176,7 +200,6 @@ a:active {
 }
 #main .product-list {
   background-color: #fff;
-  padding: .05rem;
 }
 #main .product-list .product {
   display: flex;
@@ -204,7 +227,7 @@ a:active {
 }
 #main .product-list .product .product-intro .fa-angle-right {
   position: absolute;
-  right: 5px;
+  right: .05rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: .3rem;
