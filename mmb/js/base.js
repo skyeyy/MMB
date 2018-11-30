@@ -21,44 +21,101 @@ $(function(){
 	function move(){
 		// 悬浮球的移动
 	    // 声明开始的距离 移动的Y  y的距离  到达的Y
-    var startY = startX = moveY = distanceY = distanceX = currentY = currentX = 0;
+    var startY = startX = moveY = moveX = distanceY = distanceX = currentY = currentX = 0 ;
     // 声明一个开关思想
+    // 第一个开关检测点击后是否移动了  第二个是检测是否吸右边了  第三个是检测是否第一次还是多次点击移动了
     var kar = false;
+    var clie = false;
+    var pagez = false;
 		// 手指按下事件
 		$('.navbar').on('touchstart', function (e) {
 			startY = e.touches[0].clientY
       startX = e.touches[0].clientX
-      console.log('点击'+startX,startY);
-      
 		})
 		// 移动事件
 		$('.navbar').on('touchmove', function (e) {
-           
+      if(this.classList.contains('click')) {
+        return false;
+      }
 			// 滑动的距离减去开始距离
 			moveX = e.touches[0].clientX;
 			moveY = e.touches[0].clientY;
 			distanceY = moveY - startY;
       distanceX = moveX - startX;
-      console.log("移动"+distanceX,distanceY);
-      
-			$(this).css({
-				transform: 'translate(' + (distanceX + currentX) + 'px,' + (distanceY + currentY) + 'px)'
-				// transform: 'translate(' + distanceX + 'px,' + distanceY + 'px)'
-      });
+      console.log("移动"+moveX,moveY);
+      console.log($(document).width()-10);
+        if(!clie) {
+          distanceX =  moveX<=0?-10:distanceX;
+          distanceX =  moveX>=$(document).width()-10?$(document).width()-40:distanceX;
+          
+        }else {
+          distanceX =  moveX<=30?-$(document).width()+40:distanceX;
+          distanceX =  moveX>=$(document).width()-10?10:distanceX;
+        }
+
+      // distanceX =  moveX>=$(document).width()-10?$(document).width()-40:distanceX;
+      distanceY=  distanceY<=-70?-70:distanceY;
+      distanceY=  distanceY>=$('body').height()-100?$('body').height()-100:distanceY;
+      if (pagez) {
+        $(this).css({
+          transform: 'translate(' + (distanceX +currentX ) + 'px,' + (distanceY + currentY) + 'px)'
+        });
+      }else {
+        $(this).css({
+          transform: 'translate(' + distanceX  + 'px,' + distanceY+ 'px)'
+        });
+
+      }
       kar = true;
 		})
-		$('.navbar').on('touchend', function () {
+		$('.navbar').on('touchend', function (e) {
+      pagez = true;
       if(kar) {
         currentY = currentY + distanceY;
         currentX += distanceX;
+        if(moveX > $(document).width()/2) {
+          $(this).animate({
+            transform: 'translate(' + ($('body').width()-50 )+ 'px,' + 0 + 'px)'
+          });
+          distanceX = startX =moveX  = currentX= $(document).width()-50 ;
+          startY =  moveY   = distanceY  = currentY  = 0;
+          clie = true;
+        }else {
+          $(this).animate({
+            transform: 'translate(' + 0 + 'px,' + 0 + 'px)'
+          });
+        startY = startX = moveY =moveX = distanceY = distanceX = currentY = currentX = 0;
+        clie = false;
+        }
       }
       kar = false;
 		})
 		// 开关思想
 		var i = 0;
-		document.getElementsByClassName('navbar')[0].addEventListener('click', function () {
+		document.getElementsByClassName('navbar')[0].addEventListener('tap', function () {
 		   
 			if (i == 0) {
+        if (clie) {
+          $(this).animate({
+            left:'-50px',
+            top:   '50px'
+          })
+          
+        }else {
+          $(this).animate({
+            left:'50px',
+            top:   '50px'
+          })
+        }
+        this.classList.add('click');
+        i = 1;
+			} else {
+				this.classList.remove('click');
+				i = 0;
+				$(this).animate({
+					left:'10px',
+					top:   '70px'
+
 				$(this).animate({
 					left:'0.5rem',
 					top:   '0.5rem'
@@ -72,12 +129,14 @@ $(function(){
 				$(this).animate({
 					left:'0.1rem',
 					top:   '0.7rem'
+
 				},)
 			}
 		})
 	}
-	
-	
+
+
+
     //     Zepto.js
 //     (c) 2010-2016 Thomas Fuchs
 //     Zepto.js may be freely distributed under the MIT license.
