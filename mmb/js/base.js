@@ -29,7 +29,7 @@ $(function(){
     var pagez = false;
 		// 手指按下事件
 		$('.navbar').on('touchstart', function (e) {
-      e.preventDefault();
+     
 			startY = e.touches[0].clientY
       startX = e.touches[0].clientX
 		})
@@ -71,7 +71,7 @@ $(function(){
       kar = true;
 		})
 		$('.navbar').on('touchend', function (e) {
-      e.preventDefault();
+    
       pagez = true;
       if(kar) {
         currentY = currentY + distanceY;
