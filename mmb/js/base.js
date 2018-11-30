@@ -115,10 +115,28 @@ $(function(){
 				$(this).animate({
 					left:'10px',
 					top:   '70px'
+
+				$(this).animate({
+					left:'0.5rem',
+					top:   '0.5rem'
+				})
+				this.classList.add('click');
+				i = 1;
+			} else {
+			   
+				this.classList.remove('click');
+				i = 0;
+				$(this).animate({
+					left:'0.1rem',
+					top:   '0.7rem'
+
 				},)
 			}
 		})
 	}
+
+
+
     //     Zepto.js
 //     (c) 2010-2016 Thomas Fuchs
 //     Zepto.js may be freely distributed under the MIT license.
