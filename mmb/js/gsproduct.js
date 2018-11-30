@@ -1,11 +1,10 @@
 $(function () {  
-    // var 
     $.ajax({
         url: "http://localhost:9090/api/getgsshop",
         success: function (data) {  
             console.log(data);
             var html = template('getgsshopTpl',data);
-            $('.nav #item1 ul').html(html);
+            $('.nav #shop ul').html(html);
         }
     });
     $.ajax({
@@ -13,59 +12,48 @@ $(function () {
         success: function (data) {  
             console.log(data);
             var html = template('getgsshopareaTpl',data);
-            $('.nav #item2 ul').html(html);
+            $('.nav #area ul').html(html);
         }
     }); 
+    function selectList(ele) {  
+        $('.shop-list .'+ele).on('tap',function () {
+            $(this).toggleClass('active').siblings().removeClass('active');
+            if ($(this).hasClass('active')) {
+                $('.secondary #'+ele+' ul').addClass('active');
+            }else{
+                $('.secondary #'+ele+' ul').removeClass('active');
+            }
+        })
+    }
+    selectList('shop');
+    selectList('area');
+    selectList('price')
+    function selectshop(ele) {  
+        // 选择二级菜单
+        $('#'+ ele +' ul').on('tap','li a',function () { 
+            // 获取当前元素的文本
+            var html =$(this).text().trim().split('（')[0];
+            // 设置导航栏的文本
+            $('.'+ ele +' a').text(html);
+            // 导航栏中图片文字旋转180°
+            $('.shop-list .'+ ele).removeClass('active');
+            // 二级菜单栏隐藏
+            $('.secondary #'+ ele +' ul').removeClass('active');
+            // 获取选择的二级菜单项的Id，给导航栏设置对应的Id
+            var Id = $(this).data(ele+'Id');
+            $('.shop-list .'+ ele).data(ele+'Id',Id);
+            // 二级菜单选中项显示√，其他项隐藏
+            $(this).next().css('display','block');
+            $(this).parent().siblings().find('i').css('display','none');
+            queryProduct();
+        })
+    }
+    selectshop('shop');
+    selectshop('area');
 
-
-    $('.shop-list .price').on('tap',function () {
-        $(this).toggleClass('active').siblings().removeClass('active');
-    })
-
-    $('.shop-list .shop').on('tap',function () {
-        $(this).toggleClass('active').siblings().removeClass('active');
-        if (!$(this).hasClass('active')) {
-            $('.nav #item1 ul').addClass('active');
-            
-        }else{
-            $('.nav #item1 ul').removeClass('active');
-        }
-        
-        
-    })
-    $('.shop-list .city').on('tap',function () {
-        $(this).toggleClass('active').siblings().removeClass('active');
-        
-        if (!$(this).hasClass('active')) {
-            $('.nav #item2 ul').addClass('active');
-        }else{
-            $('.nav #item2 ul').removeClass('active');
-        }
-        
-    })
-    // 点击选择某个店铺，根据店铺名显示在导航栏里
-    $('#item1 ul').on('tap','li a',function () {  
-        var html = $(this).text().trim();
-        $('.shop a').text(html);
-        $('.shop-list .shop').removeClass('active');
-        $('.nav #item1 ul').addClass('active');
-        var shopId = $(this).data('shopId');
-        $('.shop-list .shop').data('shopId',shopId);
-        console.log(shopId);
-    })
-
-    $('#item2 ul').on('tap','li a',function () {  
-        var html =$(this).text().trim().split('（')[0];
-        $('.city a').text(html);
-        $('.shop-list .city').removeClass('active');
-        $('.nav #item2 ul').addClass('active');
-        var areaId = $(this).data('areaId');
-        $('.shop-list .city').data('areaId',areaId);
-        console.log(areaId);
-    })
     function queryProduct() {  
-        var shopId = $('.shop-list .shop').data('shopId');
-        var areaId = $('.shop-list .city').data('areaId');
+        var shopId = $('.shop-list .shop').data('shopId') || 0;
+        var areaId = $('.shop-list .area').data('areaId') || 0;
         $.ajax({
             url: 'http://localhost:9090/api/getgsproduct',
             data: {shopid: shopId,areaid: areaId},
@@ -77,10 +65,10 @@ $(function () {
         })
     }
     queryProduct();
-    $('.shop-list .search').on('tap',function () {  
-        queryProduct();
-        $('.mui-scroll').css('top',0);
-    })
+    // $('.shop-list .search').on('tap',function () {  
+    //     queryProduct();
+    //     $('.mui-scroll').css('top',0);
+    // })
     mui('.mui-scroll-wrapper').scroll({
         deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
     });
