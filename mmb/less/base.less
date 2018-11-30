@@ -1,6 +1,6 @@
 @main-color: #ff6c00;
 @border-color: #dadada;
-@bcj-color: #fe4a65; 
+@bcj-color: #fe4a65;
 html {
     font-size: 100px;
 }
@@ -136,7 +136,6 @@ body {
         div:nth-child(n+2) {
             border-left: .01rem solid @border-color;
         }
-        
     }
     .content {
         padding: .15rem 0;
@@ -147,24 +146,29 @@ body {
         }
     }
 }
+
 // 悬浮球的
 .navbar {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #fff;
-    // margin: 100px auto;  
+    background: #fff; // margin: 100px auto;  
     position: fixed;
-    top: .7rem;
-    left: .1rem;
+    top: 70px;
+    left: 10px;
     z-index: 9999;
     cursor: pointer;
     background-color: rgba(0, 0, 0, .3);
+    a {
+        display: block;
+    }
+    img {
+        width: 100%;
+    }
 }
 
 .navbar.click {
     background-color: rgba(0, 0, 0, .6);
-
 }
 
 .navbar .menu {
@@ -180,13 +184,11 @@ body {
     transform: scale(0);
     transition: transform 1.4s 0.07s;
     z-index: -1;
-
 }
 
 .navbar.click .menu {
     transition: transform 0.4s 0.08s;
     transform: scale(1);
-
 }
 
 .navbar .menu li {
@@ -195,7 +197,6 @@ body {
     left: -40px;
     transform-origin: 50px 50px;
     transition: all 0.5s 0.1s;
-
 }
 
 .navbar .menu li a {
@@ -293,13 +294,4 @@ body {
 .navbar.click .menu li:nth-child(9) a {
     transition-delay: 0.36s;
     transform: rotate(315deg);
-}
-
-a {
-    display: block;
-
-}
-
-img {
-    width: 100%;
 }
