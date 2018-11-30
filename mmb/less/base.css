@@ -2,7 +2,7 @@ html {
   font-size: 100px;
 }
 body {
-  padding-top: 0.85rem;
+  padding-top: .85rem;
 }
 img {
   vertical-align: middle;
@@ -30,55 +30,55 @@ body {
   top: 0;
   left: 0;
   background-color: #fff;
-  height: 0.85rem;
+  height: .85rem;
   z-index: 999;
 }
 #header .top {
   display: flex;
-  padding: 0.1rem;
+  padding: .1rem;
   border-bottom: 1px solid #ddd;
-  height: 0.45rem;
+  height: .45rem;
 }
 #header .top .logo {
-  width: 0.8rem;
+  width: .8rem;
 }
 #header .top .logo img {
   width: 100%;
 }
 #header .top form {
   flex: 1;
-  padding: 0 0.1rem;
+  padding: 0 .1rem;
   position: relative;
 }
 #header .top form input {
   width: 100%;
-  border-radius: 0.2rem;
-  height: 0.24rem;
+  border-radius: .2rem;
+  height: .24rem;
   background-color: #f9f9f9;
-  font-size: 0.14rem;
-  padding: 0 0 0 0.35rem;
+  font-size: .14rem;
+  padding: 0 0 0 .35rem;
   text-align: left;
   margin-bottom: 0;
 }
 #header .top form .fa-search {
   position: absolute;
-  top: 0.04rem;
-  left: 0.24rem;
+  top: .04rem;
+  left: .24rem;
   color: #c8c8c8;
 }
 #header .top .download {
-  width: 0.38rem;
-  height: 0.24rem;
+  width: .38rem;
+  height: .24rem;
   border: 1px solid #f85000;
   border-radius: 12px;
   color: #f85000;
-  font-size: 0.14rem;
+  font-size: .14rem;
   text-align: center;
-  line-height: 0.24rem;
+  line-height: .24rem;
 }
 #header .nav {
   border-bottom: 1px solid #ddd;
-  height: 0.4rem;
+  height: .4rem;
 }
 #header .nav ul {
   overflow: auto;
@@ -89,8 +89,8 @@ body {
 }
 #header .nav ul li {
   display: inline-block;
-  padding: 0.1rem;
-  font-size: 0.15rem;
+  padding: .1rem;
+  font-size: .15rem;
 }
 #header .nav ul li a {
   color: #000;
@@ -105,29 +105,29 @@ body {
   content: "";
   left: 0;
   right: 0;
-  height: 0.04rem;
+  height: .04rem;
   background-color: #f9702e;
   position: absolute;
   bottom: -0.1rem;
 }
 #footer {
-  margin-top: 0.2rem;
+  margin-top: .2rem;
   background-color: #efefef;
 }
 #footer .top {
   border-top: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
   text-align: center;
-  font-size: 0.14rem;
-  height: 0.34rem;
-  line-height: 0.34rem;
+  font-size: .14rem;
+  height: .34rem;
+  line-height: .34rem;
 }
 #footer .top div:nth-child(n+2) {
   border-left: 0.01rem solid #dadada;
 }
 #footer .content {
-  padding: 0.15rem 0;
-  font-size: 0.12rem;
+  padding: .15rem 0;
+  font-size: .12rem;
   text-align: center;
 }
 #footer .content .download {
@@ -139,8 +139,8 @@ body {
   border-radius: 50%;
   background: #fff;
   position: fixed;
-  top: 0.7rem;
-  left: 0.1rem;
+  top: 70px;
+  left: 10px;
   z-index: 9999;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
